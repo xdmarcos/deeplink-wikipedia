@@ -1,0 +1,34 @@
+// Messages for Kannada (ಕನ್ನಡ)
+// Exported from translatewiki.net
+// Author: Ananth subray
+// Author: Nayvik
+// Author: Nemo bis
+// Author: VASANTH S.N.
+// Author: Vikashegde
+
+"about-libraries-complete-list" = "ಪೂರ್ಣ ಪಟ್ಟಿ";
+"about-libraries-license" = "ಪರವಾನಗಿ";
+"account-creation-logging-in" = "ನೀವು ಲಾಗ್-ಇನ್ ಆಗುತ್ತಿದ್ದೀರಿ...";
+"account-creation-saving" = "ಉಳಿಸಲಾಗುತ್ತಿದೆ....";
+// Fuzzy
+"article-languages-filter-placeholder" = "ಭಾಷಾ ಶೋಧಕ";
+"article-languages-label" = "ಭಾಷೆ ಆಯ್ದುಕೊಳ್ಳಿ";
+"button-ok" = "ಸರಿ";
+"history-clear-cancel" = "ರದ್ದುಗೊಳಿಸಿ";
+// Fuzzy
+"languages-title" = "ಭಾಷೆಗಳು";
+// Fuzzy
+"main-menu-account-login" = "ಲಾಗ್ ಇನ್";
+"main-menu-account-logout" = "ನಿರ್ಗಮಿಸು";
+"main-menu-nearby" = "ಹತ್ತಿರದ";
+"main-menu-terms-of-use" = "ಬಳಕೆಯ ನಿಬಂಧನೆಗಳು";
+"navbar-title-mode-edit-wikitext-preview" = "ಮುನ್ನೋಟ";
+"page-protected-can-not-edit-title" = "ಈ ಪುಟವನ್ನು ಸಂರಕ್ಷಿಸಲಾಗಿದೆ";
+"search-field-placeholder-text" = "ವಿಕಿಪೀಡಿಯ ಹುಡುಕು";
+"search-recent-clear-delete-all" = "ಎಲ್ಲವನ್ನೂ ಅಳಿಸಿ";
+"search-title" = "ಹುಡುಕಿ";
+"table-of-contents-close-accessibility-hint" = "ಮುಚ್ಚಿ";
+"wikitext-downloading" = "ಮಾಹಿತಿಯನ್ನು ಭರಿಸಲಾಗುತ್ತಿದೆ...";
+// Fuzzy
+"wikitext-upload-save" = "ಉಳಿಸಲಾಗುತ್ತಿದೆ....";
+"wikitext-upload-save-sign-in" = "ಲಾಗಿನ್";

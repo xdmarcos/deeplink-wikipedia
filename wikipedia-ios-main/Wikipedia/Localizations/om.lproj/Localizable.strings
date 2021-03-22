@@ -1,0 +1,50 @@
+// Messages for Oromo (Oromoo)
+// Exported from translatewiki.net
+// Author: Nemo bis
+// Author: Tumsaa
+
+// Fuzzy
+"about-contributors" = "Gumaachitoota";
+"about-libraries-license" = "Eeyyama";
+"about-title" = "Waa'ee";
+"about-wikipedia" = "Wiikippiidiyaa";
+"account-creation-logging-in" = "Seenaa jirta...";
+"account-creation-passwords-mismatched" = "Iggitni lamaan wal hinfakkaatu.";
+"account-creation-saving" = "Olkaawaa...";
+"back-button-accessibility-label" = "Gara duubaa";
+"button-next" = "Itti fufi";
+"close-button-accessibility-label" = "Cufi";
+"explore-continue-reading-heading" = "Dubbisuu itti fufi";
+"explore-potd-heading" = "Suura har'aa";
+"history-clear-cancel" = "Dhiisi";
+// Fuzzy
+"history-clear-delete-all" = "Hunda haqi";
+"icon-shortcut-search-title" = "Wiikippiidiyaa keessa barbaadi";
+// Fuzzy
+"image-gallery-unknown-owner" = "Kan ol fe'e hinbeekkamu.";
+// Fuzzy
+"main-menu-account-login" = "Seeni";
+"main-menu-account-logout" = "Ba'i";
+"main-menu-nearby" = "Dhihoo";
+// Fuzzy
+"main-menu-terms-of-use" = "Waliigaltee fayyadamaa";
+"main-menu-title" = "Dabalata";
+"menu-cancel-accessibility-label" = "Dhiisi";
+"navbar-title-mode-edit-wikitext-preview" = "Durargii";
+"nearby-distance-label-feet" = "Fiitii $1";
+"nearby-distance-label-km" = "$1 km";
+"nearby-distance-label-meters" = "$1 m";
+"nearby-distance-label-miles" = "Maayilii $1";
+"page-protected-can-not-edit" = "Fuula kana jijjiiruuf mirga hin qabdu";
+"search-did-you-mean" = "$1 jechuu keetii?";
+"search-field-placeholder-text" = "Wiikippiidiyaa keessa barbaadi";
+"search-recent-clear-cancel" = "Dhiisi";
+"search-recent-clear-delete-all" = "Hunda haqi";
+// Fuzzy
+"table-of-contents-button-label" = "Baafata";
+"table-of-contents-heading" = "Qabiyyee";
+"wikitext-downloading" = "Qabiyyee fidaa jira...";
+// Fuzzy
+"wikitext-upload-save" = "Olkaawaa...";
+"wikitext-upload-save-sign-in" = "Seeni";
+"wikitext-upload-save-terms-name" = "Waliigaltee fayyadamaa";

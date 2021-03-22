@@ -1,0 +1,80 @@
+// Messages for Chechen (нохчийн)
+// Exported from translatewiki.net
+// Author: Bsitzmann
+// Author: Nemo bis
+// Author: Умар
+
+"aaald-revision-userInfo" = "Хийцам бина $1 ($2 нисдар)";
+// Fuzzy
+"about-testers" = "тестераш";
+// Fuzzy
+"abuse-filter-disallow-heading" = "Хьуна цало хӀара нисдар Ӏалашдан. Дехар до, юху гӀой хийца и.";
+// Fuzzy
+"abuse-filter-disallow-unconstructive" = "Авто-литтаро билгалдина хӀара нисдар зуламе.";
+// Fuzzy
+"abuse-filter-warning-blanking" = "АгӀона чулацам я спам цӀамяр";
+// Fuzzy
+"abuse-filter-warning-caps" = "ДАКХИЙ ЭЛПАШЦАМ ЗОРБА";
+// Fuzzy
+"abuse-filter-warning-heading" = "ХӀара нисдар зуламе долчух тера ду. Лаьий хьуна и Ӏалашдан?";
+"abuse-filter-warning-irrelevant" = "Нийса йоцу арахьара хьажоргаш я сурт";
+"abuse-filter-warning-repeat" = "Юх-юха долу хьаьркаш";
+"account-creation-logging-in" = "Системин чудахар...";
+"action-previous-revision-accessibility" = "Хьалхара верси";
+"action-unsave" = "Ӏалаш цайина";
+"add-articles-to-reading-list" = "ТӀетоха {{PLURAL:$1|$1 яззам|$1 яззамаш}} бешаран могӀаме";
+// Fuzzy
+"article-languages-filter-placeholder" = "Меттанийн луьттург";
+"article-languages-label" = "Харжа мотт";
+"back-button-accessibility-label" = "Юханехьа";
+"button-next" = "Кхин дӀа";
+"button-ok" = "ХӀаъ";
+"cancel" = "Юхаяккха";
+"insert-media-image-position-setting-right" = "Аьтту";
+"languages-settings-title" = "Меттанаш";
+// Fuzzy
+"languages-title" = "Меттанаш";
+// Fuzzy
+"main-menu-account-login" = "ЧугӀо";
+// Fuzzy
+"main-menu-heading-legal" = "Цхьа гӀучӀа бу";
+"main-menu-nearby" = "Уллехь";
+"main-menu-privacy-policy" = "Къайлаха политика";
+// Fuzzy
+"main-menu-rate-app" = "ТӀетохаран мах хадор";
+// Fuzzy
+"main-menu-terms-of-use" = "Лелоран хьал";
+"main-menu-title" = "Кхин";
+"main-menu-zero-faq" = "Wikipedia Zero кест-кеста луш долу хаттарш";
+"menu-cancel-accessibility-label" = "Цаоьшу";
+"navbar-title-mode-edit-wikitext-preview" = "Хьалххе хьажар";
+// Fuzzy
+"nearby-distance-label-feet" = "$1 фут";
+"nearby-distance-label-km" = "$1 км";
+"nearby-distance-label-meters" = "$1 м";
+"nearby-distance-label-miles" = "$1 миль";
+"page-protected-can-not-edit" = "ХӀара агӀо таян хьан бакъо яц";
+"page-protected-can-not-edit-title" = "ХӀара агӀо ларйина ю";
+// Fuzzy
+"places-search-default-text" = "Лахар";
+// Fuzzy
+"places-search-saved-articles" = "Ӏалашйина агӀонаш";
+"preference-title-eventlogging-opt-in" = "Лелорах лаьцна дӀадохьуьйту";
+"reading-lists-default-list-title" = "Ӏалашъян";
+"relative-date-days-ago" = "{{PLURAL:$1|0=Тахана|1=Селхана|$1 де хьалха}}";
+"search-did-you-mean" = "Хила мега ахьа лоьхарг: $1";
+"search-recent-clear-cancel" = "Цаоьшу";
+"settings-clear-cache-cancel" = "Цаоьшу";
+"settings-help-and-feedback" = "ЗӀе";
+"share-default-format" = "«$1» «$2» чуьра: $3";
+"share-email-format" = "«$1»\n\n«$2» чура\n\n$3";
+"share-menu-item" = "Екха...";
+"share-message-format" = "«$1» $2";
+"share-social-format" = "«$1» Википеди чохь: $2";
+"share-social-mention-format" = "«$1» Википеди чохь: $2";
+"table-of-contents-heading" = "Чулацам";
+"wikitext-downloading" = "Чулацам чубаккхар...";
+// Fuzzy
+"wikitext-upload-save" = "Ӏалашъеш ю...";
+"wikitext-upload-save-sign-in" = "ЧугӀо";
+"wikitext-upload-save-terms-name" = "Лелоран хьал";

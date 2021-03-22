@@ -1,0 +1,56 @@
+// Messages for Karachay-Balkar (къарачай-малкъар)
+// Exported from translatewiki.net
+// Author: Ernác
+// Author: Iltever
+
+// Fuzzy
+"about-contributors" = "авторла";
+"about-libraries-license" = "Лицензия";
+// Fuzzy
+"about-repositories" = "репозиторийле";
+// Fuzzy
+"about-testers" = "тестерле";
+"about-title" = "Ачыкълау";
+"about-wikipedia" = "Википедия";
+"account-creation-logging-in" = "Системагъа кириу...";
+"account-creation-saving" = "Сакъланады…";
+// Fuzzy
+"article-languages-filter-placeholder" = "Тил фильтр";
+"article-languages-label" = "Тилни сайла";
+"button-next" = "Эндиги";
+// Fuzzy
+"edit-summary-choice-linked-words" = "Джибериулени къош";
+"history-clear-cancel" = "Ызына алыу";
+// Fuzzy
+"history-clear-confirmation-heading" = "Кёб болмагъан бютеу элементле кетерилсинлеми?";
+// Fuzzy
+"history-clear-delete-all" = "Барысын да кетер";
+// Fuzzy
+"main-menu-about" = "«Википедия» къошакъ программаны юсюнден";
+// Fuzzy
+"main-menu-account-login" = "Системагъа кириу";
+"main-menu-account-logout" = "Чыгъыу";
+// Fuzzy
+"main-menu-heading-legal" = "Къатыш зат";
+"main-menu-nearby" = "Джууукъда";
+"main-menu-privacy-policy" = "Джашыргъанлыкъ политика";
+// Fuzzy
+"main-menu-rate-app" = "Къошакъ программагъа багъа бич";
+// Fuzzy
+"main-menu-terms-of-use" = "Хайырланыу шартла";
+"main-menu-title" = "Энтда";
+"main-menu-zero-faq" = "ЧаВо по Wikipedia Zero";
+"menu-cancel-accessibility-label" = "Ысына алыу";
+"navbar-title-mode-edit-wikitext-preview" = "Ал къарау";
+"nearby-distance-label-feet" = "$1 фут";
+"nearby-distance-label-km" = "$1 км";
+"nearby-distance-label-meters" = "$1 м";
+"nearby-distance-label-miles" = "$1 миль";
+"search-did-you-mean" = "$1 излене болурму?";
+"search-field-placeholder-text" = "Википедияда излеу";
+"search-recent-clear-cancel" = "Ызына алыу";
+"search-recent-clear-delete-all" = "Барысын да кетер";
+"table-of-contents-heading" = "Контент";
+// Fuzzy
+"wikitext-upload-save" = "Сакъланады…";
+"wikitext-upload-save-sign-in" = "Кириу";
