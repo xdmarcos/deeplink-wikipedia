@@ -62,11 +62,16 @@ __attribute__((annotate("returns_localized_nsstring"))) static inline NSString *
 + (instancetype)wmf_placesActivityWithURL:(NSURL *)activityURL {
     NSURLComponents *components = [NSURLComponents componentsWithURL:activityURL resolvingAgainstBaseURL:NO];
     NSURL *articleURL = nil;
-    for (NSURLQueryItem *item in components.queryItems) {
-        if ([item.name isEqualToString:@"WMFArticleURL"]) {
-            NSString *articleURLString = item.value;
-            articleURL = [NSURL URLWithString:articleURLString];
-            break;
+    NSArray<NSURLQueryItem *> *queryItems = components.queryItems;
+    if ([components.path isEqualToString:@"/location"] && queryItems != nil ) {
+      return [self abn_placesLocationWithURL:components.queryItems];
+    } else {
+        for (NSURLQueryItem *item in components.queryItems) {
+            if ([item.name isEqualToString:@"WMFArticleURL"]) {
+                NSString *articleURLString = item.value;
+                articleURL = [NSURL URLWithString:articleURLString];
+                break;
+            }
         }
     }
     NSUserActivity *activity = [self wmf_pageActivityWithName:@"Places"];
@@ -304,6 +309,28 @@ __attribute__((annotate("returns_localized_nsstring"))) static inline NSString *
         components.queryItems = @[item];
     }
     return components.URL;
+}
+
+#pragma mark - ABN additions(Marcos)
+
++ (instancetype)abn_placesLocationWithURL:(NSArray<NSURLQueryItem *> *)queryItems {
+    NSMutableDictionary *location = [NSMutableDictionary new];
+    for (NSURLQueryItem *item in queryItems) {
+        if ([item.name isEqualToString: @"name"]) {
+            [location setValue: item.value forKey: @"name"];
+        } else if ([item.name isEqualToString:@"lat"]) {
+            [location setValue: item.value forKey: @"lat"];
+        } else if ([item.name isEqualToString:@"lon"]) {
+            [location setValue: item.value forKey: @"lon"];
+        }
+    }
+    NSUserActivity *activity = [self wmf_pageActivityWithName:@"Places"];
+    activity.webpageURL = nil;
+    NSMutableDictionary *userInfo = [[NSMutableDictionary alloc] initWithDictionary: activity.userInfo];
+    [userInfo setValue:location forKey:@"location"];
+    activity.userInfo = userInfo;
+
+    return activity;
 }
 
 @end

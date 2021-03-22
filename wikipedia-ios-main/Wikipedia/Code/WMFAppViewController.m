@@ -1133,6 +1133,9 @@ static const NSString *kvo_SavedArticlesFetcher_progress = @"kvo_SavedArticlesFe
                 // For "View on a map" action to succeed, view mode has to be set to map.
                 [[self placesViewController] updateViewModeToMap];
                 [[self placesViewController] showArticleURL:articleURL];
+            } else if ([activity.userInfo objectForKey:@"location"]) {
+                NSDictionary *locationDict = [activity.userInfo objectForKey:@"location"];
+                [self showLocationOnPlacesTab:locationDict];
             }
         } break;
         case WMFUserActivityTypeContent: {
@@ -2075,6 +2078,18 @@ static NSString *const WMFDidShowOnboarding = @"DidShowOnboarding5.3";
                                    [authenticationManager userDidAcknowledgeUnintentionalLogout];
                                }];
     });
+}
+
+#pragma mark - ABN additions(Marcos)
+
+- (void)showLocationOnPlacesTab:(NSDictionary *)locationInfo {
+    NSString *name = [locationInfo objectForKey:@"name"];
+    NSString *lat = [locationInfo objectForKey:@"lat"];
+    NSString *lon = [locationInfo objectForKey:@"lon"];
+    CLLocation *location = [[CLLocation alloc] initWithLatitude:[lat doubleValue] longitude:[lon doubleValue]];
+
+    [[self placesViewController] updateViewModeToMap];
+    [[self placesViewController] showLocationFor:name with:location];
 }
 
 @end

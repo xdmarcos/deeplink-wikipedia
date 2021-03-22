@@ -2455,3 +2455,27 @@ extension PlacesViewController {
         }
     }
 }
+
+// MARK: ABN additions(Marcos)
+
+extension PlacesViewController {
+    @objc
+    func showLocation(for name: String?, with location: CLLocation) {
+        let region = [location.coordinate].wmf_boundingRegion(with: 10000)
+        mapRegion = region
+        performCustomSearch(textString: name, region: region)
+    }
+
+    func performCustomSearch(textString: String?, region: MKCoordinateRegion) {
+        var search = PlaceSearch(filter: currentSearchFilter,
+                                 type: .location,
+                                 origin: .user,
+                                 sortStyle: .links,
+                                 string: nil,
+                                 region: region,
+                                 localizedDescription: textString,
+                                 searchResult: nil)
+        search.needsWikidataQuery = true
+        currentSearch = search
+    }
+}
