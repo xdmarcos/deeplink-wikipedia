@@ -11,6 +11,7 @@ public protocol NetworkProviderProtocol {
 
   func request<T: Decodable>(
     service: Service,
+    dataType: T.Type,
     deliverQueue: DispatchQueue,
     completion: @escaping (Result<T, Swift.Error>) -> Void
   )

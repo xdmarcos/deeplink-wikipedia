@@ -57,7 +57,7 @@ open class Session: SessionProtocol {
 
   open func validate(response: URLResponse?, with options: ResponseOptionsProtocol) throws {
     try validate(response: response, statusCodes: options.statusCodes)
-    try validate(response: response, mimeTypes: options.mimeTypes)
+//    try validate(response: response, mimeTypes: options.mimeTypes)
   }
 
   open func validate(response: URLResponse?, statusCodes: Range<Int>?) throws {

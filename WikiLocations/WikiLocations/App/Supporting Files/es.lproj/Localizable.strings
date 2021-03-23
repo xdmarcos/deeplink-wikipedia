@@ -5,3 +5,6 @@
   Created by xdmgzdev on 23/03/2021.
   
 */
+
+"location_default_name" = "Desconocido";
+"locationsTableVC_title" = "Lugares";
