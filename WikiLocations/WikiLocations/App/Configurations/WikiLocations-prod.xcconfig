@@ -9,4 +9,4 @@
 
 ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
 OTHER_SWIFT_FLAGS = $(inherited) -DCONF_PROD
-API_BASE_URL = "raw.githubusercontent.com"
+API_BASE_URL = raw.githubusercontent.com

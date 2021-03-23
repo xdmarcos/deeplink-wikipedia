@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import PlistReader
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
