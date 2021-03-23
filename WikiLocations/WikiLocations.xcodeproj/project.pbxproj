@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7A42100A260A49E000280D35 /* LightURLSessionDataTask in Frameworks */ = {isa = PBXBuildFile; productRef = 7A421009260A49E000280D35 /* LightURLSessionDataTask */; };
+		7A42100C260A49E400280D35 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 7A42100B260A49E400280D35 /* NetworkProvider */; };
 		7A855719260A3189001F9AD8 /* PlistReader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A855718260A3189001F9AD8 /* PlistReader */; };
 		7AC9276326095269005D7E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC9276226095269005D7E9C /* AppDelegate.swift */; };
 		7AC9276526095269005D7E9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC9276426095269005D7E9C /* SceneDelegate.swift */; };
@@ -46,7 +48,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A42100C260A49E400280D35 /* NetworkProvider in Frameworks */,
 				7A855719260A3189001F9AD8 /* PlistReader in Frameworks */,
+				7A42100A260A49E000280D35 /* LightURLSessionDataTask in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -146,6 +150,8 @@
 			name = WikiLocations;
 			packageProductDependencies = (
 				7A855718260A3189001F9AD8 /* PlistReader */,
+				7A421009260A49E000280D35 /* LightURLSessionDataTask */,
+				7A42100B260A49E400280D35 /* NetworkProvider */,
 			);
 			productName = WikiLocations;
 			productReference = 7AC9275F26095269005D7E9C /* WikiLocations.app */;
@@ -594,6 +600,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A421009260A49E000280D35 /* LightURLSessionDataTask */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = LightURLSessionDataTask;
+		};
+		7A42100B260A49E400280D35 /* NetworkProvider */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = NetworkProvider;
+		};
 		7A855718260A3189001F9AD8 /* PlistReader */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlistReader;

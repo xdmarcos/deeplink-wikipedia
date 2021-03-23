@@ -8,6 +8,12 @@
       location = "container:Packages"
       name = "Packages">
       <FileRef
+         location = "group:LightURLSessionDataTask">
+      </FileRef>
+      <FileRef
+         location = "group:NetworkProvider">
+      </FileRef>
+      <FileRef
          location = "group:PlistReader">
       </FileRef>
    </Group>
