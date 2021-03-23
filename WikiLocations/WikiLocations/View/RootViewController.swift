@@ -13,6 +13,11 @@ class RootViewController: UINavigationController {
     super.viewDidLoad()
 
     viewControllers = [UIViewController()]
+    #if CONF_STAGE
+    view.backgroundColor = UIColor(named: "AccentColor")
+    #elseif CONF_PROD
     view.backgroundColor = .systemBackground
+    #endif
+
   }
 }

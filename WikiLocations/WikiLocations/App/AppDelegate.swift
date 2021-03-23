@@ -15,7 +15,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     #if CONF_STAGE
     print(" 🚀 - Running on STAGE configuration")
-    #else
+    #elseif CONF_PROD
     print(" 🚀 - Running on PROD configuration")
     #endif
     return true

@@ -1,5 +1,5 @@
 //
-//  WikiLocations_release.xcconfig
+//  WikiLocations-prod.xcconfig
 //  WikiLocations
 //
 //  Created by xdmgzdev on 23/03/2021.
@@ -7,4 +7,6 @@
 
 #include "WikiLocations.xcconfig"
 
+ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
 OTHER_SWIFT_FLAGS = $(inherited) -DCONF_PROD
+API_BASE_URL = "raw.githubusercontent.com"

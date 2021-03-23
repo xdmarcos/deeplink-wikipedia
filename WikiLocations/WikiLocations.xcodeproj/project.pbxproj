@@ -15,12 +15,11 @@
 		7AC927BD2609F0AE005D7E9C /* ScreenStackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC927BC2609F0AE005D7E9C /* ScreenStackProtocol.swift */; };
 		7AC927D92609FDA4005D7E9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AC927DB2609FDA4005D7E9C /* Localizable.strings */; };
 		7AC927E42609FEA8005D7E9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AC927E62609FEA8005D7E9C /* InfoPlist.strings */; };
-		7AC92824260A0081005D7E9C /* WikiLocations.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7AC92823260A0081005D7E9C /* WikiLocations.xcconfig */; };
-		7AC92828260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7AC92827260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig */; };
-		7AC9282B260A00F5005D7E9C /* WikiLocations_PROD.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 7AC9282A260A00F5005D7E9C /* WikiLocations_PROD.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7A9C0374260A1D2200B0CA6A /* WikiLocations-stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "WikiLocations-stage.xcconfig"; sourceTree = "<group>"; };
+		7A9C0375260A1D5300B0CA6A /* WikiLocations-prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "WikiLocations-prod.xcconfig"; sourceTree = "<group>"; };
 		7AC9275F26095269005D7E9C /* WikiLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC9276226095269005D7E9C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7AC9276426095269005D7E9C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -39,8 +38,6 @@
 		7AC927E82609FEAB005D7E9C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7AC927E92609FEAC005D7E9C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7AC92823260A0081005D7E9C /* WikiLocations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WikiLocations.xcconfig; sourceTree = "<group>"; };
-		7AC92827260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WikiLocations_STAGE.xcconfig; sourceTree = "<group>"; };
-		7AC9282A260A00F5005D7E9C /* WikiLocations_PROD.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WikiLocations_PROD.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,8 +112,8 @@
 			isa = PBXGroup;
 			children = (
 				7AC92823260A0081005D7E9C /* WikiLocations.xcconfig */,
-				7AC92827260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig */,
-				7AC9282A260A00F5005D7E9C /* WikiLocations_PROD.xcconfig */,
+				7A9C0374260A1D2200B0CA6A /* WikiLocations-stage.xcconfig */,
+				7A9C0375260A1D5300B0CA6A /* WikiLocations-prod.xcconfig */,
 			);
 			path = Configurations;
 			sourceTree = "<group>";
@@ -182,11 +179,8 @@
 			files = (
 				7AC927D92609FDA4005D7E9C /* Localizable.strings in Resources */,
 				7AC927E42609FEA8005D7E9C /* InfoPlist.strings in Resources */,
-				7AC92824260A0081005D7E9C /* WikiLocations.xcconfig in Resources */,
 				7AC9276F2609526B005D7E9C /* LaunchScreen.storyboard in Resources */,
 				7AC9276C2609526B005D7E9C /* Assets.xcassets in Resources */,
-				7AC92828260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig in Resources */,
-				7AC9282B260A00F5005D7E9C /* WikiLocations_PROD.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -243,7 +237,7 @@
 /* Begin XCBuildConfiguration section */
 		7AB76A52260A0984009A2DAB /* Release_PROD */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AC9282A260A00F5005D7E9C /* WikiLocations_PROD.xcconfig */;
+			baseConfigurationReference = 7A9C0375260A1D5300B0CA6A /* WikiLocations-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -295,7 +289,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -305,7 +298,6 @@
 		7AB76A53260A0984009A2DAB /* Release_PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSYPP7R75C;
@@ -315,9 +307,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocations;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -325,7 +315,7 @@
 		};
 		7AB76A57260A09A9009A2DAB /* Debug_PROD */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AC9282A260A00F5005D7E9C /* WikiLocations_PROD.xcconfig */;
+			baseConfigurationReference = 7A9C0375260A1D5300B0CA6A /* WikiLocations-prod.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -380,7 +370,6 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -390,7 +379,6 @@
 		7AB76A58260A09A9009A2DAB /* Debug_PROD */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSYPP7R75C;
@@ -400,9 +388,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocations;
-				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -410,7 +396,7 @@
 		};
 		7AB76A59260A09BD009A2DAB /* Release_STAGE */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AC92827260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig */;
+			baseConfigurationReference = 7A9C0374260A1D2200B0CA6A /* WikiLocations-stage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -462,7 +448,6 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = NO;
-				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -472,7 +457,6 @@
 		7AB76A5A260A09BD009A2DAB /* Release_STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSYPP7R75C;
@@ -482,9 +466,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocations;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocations.stage;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -492,7 +474,7 @@
 		};
 		7AC927712609526B005D7E9C /* Debug_STAGE */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 7AC92827260A00D7005D7E9C /* WikiLocations_STAGE.xcconfig */;
+			baseConfigurationReference = 7A9C0374260A1D2200B0CA6A /* WikiLocations-stage.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
@@ -547,7 +529,6 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				OTHER_SWIFT_FLAGS = "";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -557,7 +538,6 @@
 		7AC927742609526B005D7E9C /* Debug_STAGE */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = BSYPP7R75C;
@@ -567,9 +547,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				OTHER_SWIFT_FLAGS = "";
-				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocations;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocations.stage;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
