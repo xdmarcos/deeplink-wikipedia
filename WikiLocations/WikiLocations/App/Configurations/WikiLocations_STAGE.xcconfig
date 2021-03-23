@@ -1,0 +1,10 @@
+//
+//  WikiLocations_debug.xcconfig
+//  WikiLocations
+//
+//  Created by xdmgzdev on 23/03/2021.
+//
+
+#include "WikiLocations.xcconfig"
+
+OTHER_SWIFT_FLAGS = $(inherited) -DCONF_STAGE
