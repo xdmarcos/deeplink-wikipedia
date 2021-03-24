@@ -22,7 +22,7 @@ struct Location: Decodable, Hashable, Equatable {
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
 
-    let defaultName = NSLocalizedString("location_default_name", comment: "Default name")
+    let defaultName = "location_default_name".localized
     name = try container.decodeIfPresent(String.self, forKey: .name) ?? defaultName
     lat = Self.ensureDoubleValue(container, forKey: .lat)
     long = Self.ensureDoubleValue(container, forKey: .long)

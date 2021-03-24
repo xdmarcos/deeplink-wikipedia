@@ -9,10 +9,7 @@ import UIKit
 
 class LocationsViewModel: ViewModelProtocol {
   private enum ViewModelConst {
-    static let title = NSLocalizedString(
-      "locationsTableVC_title",
-      comment: "Title for navigationBar"
-    )
+    static let title = "locationsTableVC_title".localized
     static let deeplinkFormat = "wikipedia://places/location?name=%@&lat=%f&lon=%f"
   }
 
@@ -52,10 +49,7 @@ class LocationsViewModel: ViewModelProtocol {
             let openURL = URL(string: deeplinkString) else { return }
 
     guard UIApplication.shared.canOpenURL(openURL) else {
-      errorMessage = NSLocalizedString(
-        "locationsViewModel_openurl_error",
-        comment: "Error message for openURL"
-      )
+      errorMessage = "locationsViewModel_openurl_error".localized
       view?.displayError()
       return
     }

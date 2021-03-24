@@ -76,12 +76,12 @@ extension LocationsTableViewController: LocationsViewProtocol {
 
   func displayError() {
     let alert = UIAlertController(
-      title: NSLocalizedString("locationsTableVC_alert_error", comment: "Alert error title"),
+      title: "locationsTableVC_alert_error".localized,
       message: viewModel.errorMessage,
       preferredStyle: .alert
     )
     alert.addAction(UIAlertAction(
-      title: NSLocalizedString("locationsTableVC_alert_ok", comment: "Alert ok button"),
+      title: "locationsTableVC_alert_ok".localized,
       style: .default,
       handler: nil
     ))
