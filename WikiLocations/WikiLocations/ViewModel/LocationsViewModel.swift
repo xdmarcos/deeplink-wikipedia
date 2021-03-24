@@ -5,27 +5,74 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
-import Foundation
+import UIKit
 
-protocol ViewModelProtocol {
-  func loadData()
-}
+class LocationsViewModel: ViewModelProtocol {
+  private enum ViewModelConst {
+    static let title = NSLocalizedString(
+      "locationsTableVC_title",
+      comment: "Title for navigationBar"
+    )
+    static let deeplinkFormat = "wikipedia://places/location?name=%@&lat=%f&lon=%f"
+  }
 
-struct LocationsViewModel: ViewModelProtocol {
+  var view: LocationsViewProtocol?
+  var title = ViewModelConst.title
+  var errorMessage: String?
+  var numberOfSections = 1
+  var locationList: LocationList = []
   let locationsRepo: LocationRepositoryProtocol
 
   init(locationsRepository: LocationRepositoryProtocol = LocationRepository()) {
-    self.locationsRepo = locationsRepository
+    locationsRepo = locationsRepository
   }
 
   func loadData() {
-    locationsRepo.getLocations { result in
-      switch result{
+    locationsRepo.getLocations { [weak self] result in
+      guard let self = self else { return }
+
+      switch result {
       case let .success(locations):
-        print("Locations: \(locations)")
+        self.loadDataDidSuccess(locations: locations)
       case let .failure(error):
-        print("Error: \(error)")
+        self.loadDataDidFail(error: error)
       }
     }
+  }
+
+  func handleSelectedCell(indexPath: IndexPath) {
+    guard let location = locationList[safe: indexPath.row],
+          let deeplinkString = String(
+            format: ViewModelConst.deeplinkFormat,
+            location.name,
+            location.lat,
+            location.long
+          )
+            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let openURL = URL(string: deeplinkString) else { return }
+
+    guard UIApplication.shared.canOpenURL(openURL) else {
+      errorMessage = NSLocalizedString(
+        "locationsViewModel_openurl_error",
+        comment: "Error message for openURL"
+      )
+      view?.displayError()
+      return
+    }
+
+    UIApplication.shared.open(openURL, options: [:], completionHandler: nil)
+  }
+}
+
+private extension LocationsViewModel {
+  func loadDataDidSuccess(locations: LocationList) {
+    title = "\(ViewModelConst.title)(\(locations.count))"
+    locationList = locations
+    view?.displayNewData()
+  }
+
+  func loadDataDidFail(error: Error) {
+    errorMessage = error.localizedDescription
+    view?.displayError()
   }
 }

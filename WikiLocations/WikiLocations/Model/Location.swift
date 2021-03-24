@@ -10,7 +10,7 @@ import Foundation
 typealias LocationList = [Location]
 
 struct Location: Decodable, Equatable {
-  let name: String?
+  let name: String
   let lat, long: Double
 
   enum CodingKeys: String, CodingKey {
@@ -22,25 +22,29 @@ struct Location: Decodable, Equatable {
   init(from decoder: Decoder) throws {
     let container = try decoder.container(keyedBy: CodingKeys.self)
 
-    let defaultName = NSLocalizedString("location_default_name",comment: "Default name")
+    let defaultName = NSLocalizedString("location_default_name", comment: "Default name")
     name = try container.decodeIfPresent(String.self, forKey: .name) ?? defaultName
+    lat = Self.ensureDoubleValue(container, forKey: .lat)
+    long = Self.ensureDoubleValue(container, forKey: .long)
+  }
+}
 
-    var latDouble: Double?
-    do {
-      latDouble = try container.decode(Double.self, forKey: .lat)
-    } catch {
-      let latString = try container.decode(String.self, forKey: .lat)
-      latDouble = Double(latString)
-    }
-    lat = latDouble ?? 0.0
+private extension Location {
+  static func ensureDoubleValue(
+    _ container: KeyedDecodingContainer<CodingKeys>,
+    forKey key: CodingKeys
+  ) -> Double {
+    var doubleValue: Double?
 
-    var lonDouble: Double?
     do {
-      lonDouble = try container.decode(Double.self, forKey: .long)
+      doubleValue = try container.decode(Double.self, forKey: key)
     } catch {
-      let lonString = try container.decode(String.self, forKey: .long)
-      lonDouble = Double(lonString)
+      guard let stringValue = try? container.decode(String.self, forKey: key) else {
+        return 0.0
+      }
+      doubleValue = Double(stringValue)
     }
-    long = lonDouble ?? 0.0
+    
+    return doubleValue ?? 0.0
   }
 }

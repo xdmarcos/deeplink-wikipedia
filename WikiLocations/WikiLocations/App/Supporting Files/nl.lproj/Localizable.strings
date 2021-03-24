@@ -8,3 +8,6 @@
 
 "location_default_name" = "Onbekend";
 "locationsTableVC_title" = "Locaties";
+"locationsTableVC_alert_error" = "Error";
+"locationsTableVC_alert_ok" = "OK";
+"locationsViewModel_openurl_error" = "Wikipedia iOS-app moet zijn geïnstalleerd.";

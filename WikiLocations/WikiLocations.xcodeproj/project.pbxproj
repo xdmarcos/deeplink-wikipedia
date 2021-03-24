@@ -14,10 +14,13 @@
 		7A421028260A68A700280D35 /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A421027260A68A700280D35 /* LocationClient.swift */; };
 		7A42102C260A68B300280D35 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A42102B260A68B300280D35 /* Location.swift */; };
 		7A421030260A69A900280D35 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A42102F260A69A900280D35 /* LocationService.swift */; };
+		7A43E36F260B66B9004FF429 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43E36E260B66B9004FF429 /* ViewModelProtocol.swift */; };
+		7A633C60260B5ECE004121DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A633C5F260B5ECE004121DE /* Extensions.swift */; };
 		7A710F20260A7C81009FBA2C /* LocationJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A710F1F260A7C81009FBA2C /* LocationJson.swift */; };
 		7A710F23260A7E1F009FBA2C /* LocationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A710F22260A7E1F009FBA2C /* LocationRepositoryProtocol.swift */; };
 		7A710F28260A80AA009FBA2C /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A710F27260A80AA009FBA2C /* LocationRepository.swift */; };
 		7A855719260A3189001F9AD8 /* PlistReader in Frameworks */ = {isa = PBXBuildFile; productRef = 7A855718260A3189001F9AD8 /* PlistReader */; };
+		7A940500260B723500600FBB /* LocationsViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A9404FF260B723500600FBB /* LocationsViewProtocol.swift */; };
 		7AC9276326095269005D7E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC9276226095269005D7E9C /* AppDelegate.swift */; };
 		7AC9276526095269005D7E9C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC9276426095269005D7E9C /* SceneDelegate.swift */; };
 		7AC9276726095269005D7E9C /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC9276626095269005D7E9C /* RootViewController.swift */; };
@@ -26,6 +29,7 @@
 		7AC927BD2609F0AE005D7E9C /* ScreenStackProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AC927BC2609F0AE005D7E9C /* ScreenStackProtocol.swift */; };
 		7AC927D92609FDA4005D7E9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AC927DB2609FDA4005D7E9C /* Localizable.strings */; };
 		7AC927E42609FEA8005D7E9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AC927E62609FEA8005D7E9C /* InfoPlist.strings */; };
+		7AE92ADC260B5447004B94A2 /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7AE92ADB260B5447004B94A2 /* CommonUI */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,9 +38,12 @@
 		7A421027260A68A700280D35 /* LocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClient.swift; sourceTree = "<group>"; };
 		7A42102B260A68B300280D35 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7A42102F260A69A900280D35 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
+		7A43E36E260B66B9004FF429 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
+		7A633C5F260B5ECE004121DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7A710F1F260A7C81009FBA2C /* LocationJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationJson.swift; sourceTree = "<group>"; };
 		7A710F22260A7E1F009FBA2C /* LocationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryProtocol.swift; sourceTree = "<group>"; };
 		7A710F27260A80AA009FBA2C /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
+		7A9404FF260B723500600FBB /* LocationsViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewProtocol.swift; sourceTree = "<group>"; };
 		7A9C0374260A1D2200B0CA6A /* WikiLocations-stage.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "WikiLocations-stage.xcconfig"; sourceTree = "<group>"; };
 		7A9C0375260A1D5300B0CA6A /* WikiLocations-prod.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "WikiLocations-prod.xcconfig"; sourceTree = "<group>"; };
 		7AC9275F26095269005D7E9C /* WikiLocations.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WikiLocations.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -67,6 +74,7 @@
 				7A42100C260A49E400280D35 /* NetworkProvider in Frameworks */,
 				7A855719260A3189001F9AD8 /* PlistReader in Frameworks */,
 				7A42100A260A49E000280D35 /* LightURLSessionDataTask in Frameworks */,
+				7AE92ADC260B5447004B94A2 /* CommonUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -76,9 +84,19 @@
 		7A0C2E3C260A833C00C57C14 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				7A43E36E260B66B9004FF429 /* ViewModelProtocol.swift */,
 				7A0C2E3D260A837800C57C14 /* LocationsViewModel.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		7A0C2EA2260A983E00C57C14 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				7A9404FF260B723500600FBB /* LocationsViewProtocol.swift */,
+				7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */,
+			);
+			path = List;
 			sourceTree = "<group>";
 		};
 		7A421025260A687800280D35 /* Repository */ = {
@@ -97,6 +115,14 @@
 				7A710F1F260A7C81009FBA2C /* LocationJson.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		7A633C5E260B5EC0004121DE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				7A633C5F260B5ECE004121DE /* Extensions.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7A710F2B260A81E7009FBA2C /* Services */ = {
@@ -151,6 +177,7 @@
 				7AC9276226095269005D7E9C /* AppDelegate.swift */,
 				7AC9276426095269005D7E9C /* SceneDelegate.swift */,
 				7AC927BC2609F0AE005D7E9C /* ScreenStackProtocol.swift */,
+				7A633C5E260B5EC0004121DE /* Helpers */,
 				7AC927EB2609FFF6005D7E9C /* Configurations */,
 				7AC927C32609F4CA005D7E9C /* Supporting Files */,
 			);
@@ -173,7 +200,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC9276626095269005D7E9C /* RootViewController.swift */,
-				7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */,
+				7A0C2EA2260A983E00C57C14 /* List */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -208,6 +235,7 @@
 				7A855718260A3189001F9AD8 /* PlistReader */,
 				7A421009260A49E000280D35 /* LightURLSessionDataTask */,
 				7A42100B260A49E400280D35 /* NetworkProvider */,
+				7AE92ADB260B5447004B94A2 /* CommonUI */,
 			);
 			productName = WikiLocations;
 			productReference = 7AC9275F26095269005D7E9C /* WikiLocations.app */;
@@ -270,6 +298,7 @@
 				7AC9276726095269005D7E9C /* RootViewController.swift in Sources */,
 				7AC9276326095269005D7E9C /* AppDelegate.swift in Sources */,
 				7A421028260A68A700280D35 /* LocationClient.swift in Sources */,
+				7A43E36F260B66B9004FF429 /* ViewModelProtocol.swift in Sources */,
 				7AC927BD2609F0AE005D7E9C /* ScreenStackProtocol.swift in Sources */,
 				7A42102C260A68B300280D35 /* Location.swift in Sources */,
 				7A710F28260A80AA009FBA2C /* LocationRepository.swift in Sources */,
@@ -278,6 +307,8 @@
 				7A710F20260A7C81009FBA2C /* LocationJson.swift in Sources */,
 				7A710F23260A7E1F009FBA2C /* LocationRepositoryProtocol.swift in Sources */,
 				7AC9276526095269005D7E9C /* SceneDelegate.swift in Sources */,
+				7A940500260B723500600FBB /* LocationsViewProtocol.swift in Sources */,
+				7A633C60260B5ECE004121DE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -675,6 +706,10 @@
 		7A855718260A3189001F9AD8 /* PlistReader */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = PlistReader;
+		};
+		7AE92ADB260B5447004B94A2 /* CommonUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = CommonUI;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

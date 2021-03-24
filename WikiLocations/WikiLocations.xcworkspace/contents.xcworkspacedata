@@ -8,6 +8,9 @@
       location = "container:Packages"
       name = "Packages">
       <FileRef
+         location = "group:CommonUI">
+      </FileRef>
+      <FileRef
          location = "group:LightURLSessionDataTask">
       </FileRef>
       <FileRef

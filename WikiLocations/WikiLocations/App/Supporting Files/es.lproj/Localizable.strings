@@ -8,3 +8,6 @@
 
 "location_default_name" = "Desconocido";
 "locationsTableVC_title" = "Lugares";
+"locationsTableVC_alert_error" = "Error";
+"locationsTableVC_alert_ok" = "OK";
+"locationsViewModel_openurl_error" = "La App Wikipedia debe estar instalada.";
