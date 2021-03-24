@@ -29,7 +29,7 @@ public class BaseTableView: UIView {
   override public init(frame: CGRect) {
     // tableView
     tableView = UITableView(frame: .zero, style: .plain)
-    tableView.backgroundColor = .systemBackground
+    tableView.backgroundColor = .systemGray6
     tableView.separatorStyle = .none
     tableView.rowHeight = UITableView.automaticDimension
     tableView.estimatedRowHeight = ViewTraits.estimatedRowHeight
@@ -42,7 +42,7 @@ public class BaseTableView: UIView {
     // Init
     super.init(frame: frame)
 
-    backgroundColor = .systemBackground
+    backgroundColor = .systemGray6
     accessibilityIdentifier = Accessibility.Identifier.rootView
 
     // Add subviews

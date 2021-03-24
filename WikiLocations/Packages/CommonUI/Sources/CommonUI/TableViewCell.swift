@@ -43,21 +43,21 @@ public class BaseTableViewCell: UITableViewCell {
   override public init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
     // symbolLabel
     symbolLabel = UILabel()
-    symbolLabel.font = UIFont.boldSystemFont(ofSize: ViewTraits.fontBig)
-    symbolLabel.textColor = .darkText
+    symbolLabel.font = UIFont.preferredFont(forTextStyle: .largeTitle)
+    symbolLabel.textColor = .label
     symbolLabel.textAlignment = .center
     symbolLabel.accessibilityIdentifier = Accessibility.Identifier.symbolLabel
 
     // titleLabel
     titleLabel = UILabel()
-    titleLabel.font = UIFont.boldSystemFont(ofSize: ViewTraits.fontMedium)
-    titleLabel.textColor = .darkText
+    titleLabel.font = UIFont.preferredFont(forTextStyle: .title3)
+    titleLabel.textColor = .label
     titleLabel.accessibilityIdentifier = Accessibility.Identifier.titleLabel
 
     // detailLabel
     detailLabel = UILabel()
-    detailLabel.font = UIFont.systemFont(ofSize: ViewTraits.fontSmall)
-    detailLabel.textColor = .lightGray
+    detailLabel.font = UIFont.preferredFont(forTextStyle: .footnote)
+    detailLabel.textColor = .secondaryLabel
     detailLabel.textAlignment = .left
     detailLabel.lineBreakMode = .byTruncatingHead
     detailLabel.numberOfLines = ViewTraits.numberOfLines
@@ -65,12 +65,12 @@ public class BaseTableViewCell: UITableViewCell {
 
     // separatorView
     separatorView = UIView()
-    separatorView.backgroundColor = .lightGray
+    separatorView.backgroundColor = .systemGray2
 
     super.init(style: style, reuseIdentifier: reuseIdentifier)
 
     selectionStyle = .none
-    backgroundColor = .systemBackground
+    backgroundColor = .systemGray6
 
     // Add subviews
     contentView
