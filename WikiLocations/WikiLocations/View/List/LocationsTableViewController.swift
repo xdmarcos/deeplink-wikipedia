@@ -5,6 +5,7 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
+import Combine
 import CommonUI
 import UIKit
 
@@ -13,22 +14,18 @@ class LocationsTableViewController: UIViewController {
   private var viewModel: ViewModelProtocol
   private var refreshControl = UIRefreshControl()
   private lazy var dataSource = makeDataSource()
+  private var disposables = Set<AnyCancellable>()
 
-    // MARK: Object lifecycle
+  // MARK: Object lifecycle
 
-    public init(viewModel: ViewModelProtocol = LocationsViewModel()) {
+  public init(viewModel: ViewModelProtocol = LocationsViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
-    setup()
   }
 
   @available(*, unavailable)
   required init?(coder _: NSCoder) {
     fatalError("init(coder:) has not been implemented")
-  }
-
-  private func setup() {
-    viewModel.view = self
   }
 
   // MARK: View lifecycle
@@ -40,10 +37,8 @@ class LocationsTableViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = viewModel.title
-
     refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-    refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+    refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     sceneView.tableView.addSubview(refreshControl)
 
     sceneView.tableView.delegate = self
@@ -57,35 +52,12 @@ class LocationsTableViewController: UIViewController {
   override func viewDidAppear(_ animated: Bool) {
     super.viewDidAppear(animated)
 
+    bindContent()
     retrieveLocations()
   }
 
-  @objc func refresh(_ sender: AnyObject) {
+  @objc func refresh(_: AnyObject) {
     retrieveLocations()
-  }
-}
-
-// MARK: LocationsViewProtocol
-
-extension LocationsTableViewController: LocationsViewProtocol {
-  func displayNewData() {
-    title = viewModel.title
-    refreshControl.endRefreshing()
-    update(with: viewModel.locationList)
-  }
-
-  func displayError() {
-    let alert = UIAlertController(
-      title: "locationsTableVC_alert_error".localized,
-      message: viewModel.errorMessage,
-      preferredStyle: .alert
-    )
-    alert.addAction(UIAlertAction(
-      title: "locationsTableVC_alert_ok".localized,
-      style: .default,
-      handler: nil
-    ))
-    present(alert, animated: true, completion: nil)
   }
 }
 
@@ -119,6 +91,75 @@ extension LocationsTableViewController {
 // MARK: Private
 
 private extension LocationsTableViewController {
+  func bindContent() {
+    bindTitle()
+    bindDataSource()
+    bindLoadingState()
+    bindErrorState()
+  }
+
+  func bindTitle() {
+    if let viewModel = viewModel as? LocationsViewModel {
+      viewModel
+        .$title
+        .sink { [weak self] tilte in
+          guard let self = self else { return }
+          self.title = tilte
+        }.store(in: &disposables)
+    }
+  }
+
+  func bindDataSource() {
+    if let viewModel = viewModel as? LocationsViewModel {
+      viewModel
+        .$locationList
+        .sink { [weak self] locations in
+          guard let self = self else { return }
+          self.update(with: locations)
+        }.store(in: &disposables)
+    }
+  }
+
+  func bindLoadingState() {
+    if let viewModel = viewModel as? LocationsViewModel {
+      viewModel
+        .$isLoading
+        .sink { [weak self] isLoading in
+          guard let self = self else { return }
+
+          if !isLoading {
+            self.refreshControl.endRefreshing()
+          }
+        }.store(in: &disposables)
+    }
+  }
+
+  func bindErrorState() {
+    if let viewModel = viewModel as? LocationsViewModel {
+      viewModel
+        .$errorMessage
+        .sink { [weak self] errorMessage in
+          guard let self = self,
+                let message = errorMessage else { return }
+          self.displayError(message: message)
+        }.store(in: &disposables)
+    }
+  }
+
+  func displayError(message: String) {
+    let alert = UIAlertController(
+      title: "locationsTableVC_alert_error".localized,
+      message: message,
+      preferredStyle: .alert
+    )
+    alert.addAction(UIAlertAction(
+      title: "locationsTableVC_alert_ok".localized,
+      style: .default,
+      handler: nil
+    ))
+    present(alert, animated: true, completion: nil)
+  }
+
   func retrieveLocations() {
     viewModel.loadData()
   }

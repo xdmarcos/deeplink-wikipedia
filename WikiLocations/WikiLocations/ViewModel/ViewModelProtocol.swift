@@ -8,11 +8,10 @@
 import Foundation
 
 protocol ViewModelProtocol {
-  var view: LocationsViewProtocol? { set get }
   var title: String { get }
   var locationList: LocationList { get }
-  var numberOfSections: Int { get }
   var errorMessage: String? { get }
+  var isLoading: Bool { get }
   func loadData()
   func handleSelectedCell(indexPath: IndexPath)
 }

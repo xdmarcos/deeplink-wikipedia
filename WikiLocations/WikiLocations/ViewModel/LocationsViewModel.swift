@@ -5,6 +5,7 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
+import Combine
 import UIKit
 
 class LocationsViewModel: ViewModelProtocol {
@@ -12,19 +13,19 @@ class LocationsViewModel: ViewModelProtocol {
     static let title = "locationsTableVC_title".localized
     static let deeplinkFormat = "wikipedia://places/location?name=%@&lat=%f&lon=%f"
   }
+  private let locationsRepo: LocationRepositoryProtocol
 
-  var view: LocationsViewProtocol?
-  var title = ViewModelConst.title
-  var errorMessage: String?
-  var numberOfSections = 1
-  var locationList: LocationList = []
-  let locationsRepo: LocationRepositoryProtocol
+  @Published var title = ViewModelConst.title
+  @Published var errorMessage: String?
+  @Published var locationList: LocationList = []
+  @Published var isLoading: Bool = false
 
   init(locationsRepository: LocationRepositoryProtocol = LocationRepository()) {
     locationsRepo = locationsRepository
   }
 
   func loadData() {
+    isLoading = true
     locationsRepo.getLocations { [weak self] result in
       guard let self = self else { return }
 
@@ -50,7 +51,6 @@ class LocationsViewModel: ViewModelProtocol {
 
     guard UIApplication.shared.canOpenURL(openURL) else {
       errorMessage = "locationsViewModel_openurl_error".localized
-      view?.displayError()
       return
     }
 
@@ -60,13 +60,13 @@ class LocationsViewModel: ViewModelProtocol {
 
 private extension LocationsViewModel {
   func loadDataDidSuccess(locations: LocationList) {
+    isLoading = false
     title = "\(ViewModelConst.title)(\(locations.count))"
     locationList = locations
-    view?.displayNewData()
   }
 
   func loadDataDidFail(error: Error) {
+    isLoading = false
     errorMessage = error.localizedDescription
-    view?.displayError()
   }
 }
