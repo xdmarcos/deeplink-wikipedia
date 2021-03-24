@@ -5,6 +5,6 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
-struct LocationJson: Decodable, Equatable {
+struct LocationJson: Decodable, Hashable, Equatable {
   let locations: [Location]
 }

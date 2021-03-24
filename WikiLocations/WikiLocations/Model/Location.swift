@@ -9,7 +9,7 @@ import Foundation
 
 typealias LocationList = [Location]
 
-struct Location: Decodable, Equatable {
+struct Location: Decodable, Hashable, Equatable {
   let name: String
   let lat, long: Double
 

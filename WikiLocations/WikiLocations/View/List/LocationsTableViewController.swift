@@ -9,12 +9,14 @@ import CommonUI
 import UIKit
 
 class LocationsTableViewController: UIViewController {
-  let sceneView = CommonUI.genericTableView
-  var viewModel: ViewModelProtocol
+  private let sceneView = CommonUI.genericTableView
+  private var viewModel: ViewModelProtocol
+  private var refreshControl = UIRefreshControl()
+  private lazy var dataSource = makeDataSource()
 
-  // MARK: Object lifecycle
+    // MARK: Object lifecycle
 
-  public init(viewModel: ViewModelProtocol = LocationsViewModel()) {
+    public init(viewModel: ViewModelProtocol = LocationsViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
     setup()
@@ -39,62 +41,37 @@ class LocationsTableViewController: UIViewController {
     super.viewDidLoad()
 
     title = viewModel.title
+
+    refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+    refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+    sceneView.tableView.addSubview(refreshControl)
+
     sceneView.tableView.delegate = self
-    sceneView.tableView.dataSource = self
+    sceneView.tableView.dataSource = dataSource
     sceneView.tableView.register(
       BaseTableViewCell.self,
       forCellReuseIdentifier: BaseTableViewCell.reuseIdentifier
     )
+  }
 
-    viewModel.loadData()
+  override func viewDidAppear(_ animated: Bool) {
+    super.viewDidAppear(animated)
+
+    retrieveLocations()
+  }
+
+  @objc func refresh(_ sender: AnyObject) {
+    retrieveLocations()
   }
 }
 
-// MARK: UITableView delegate & datasource
-
-extension LocationsTableViewController: UITableViewDelegate, UITableViewDataSource {
-  func numberOfSections(in _: UITableView) -> Int {
-    return viewModel.numberOfSections
-  }
-
-  func tableView(_: UITableView, numberOfRowsInSection _: Int) -> Int {
-    return viewModel.locationList.count
-  }
-
-  func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-    if let cell = tableView.dequeueReusableCell(
-      withIdentifier: BaseTableViewCell.reuseIdentifier,
-      for: indexPath
-    ) as? BaseTableViewCell {
-      return configureCell(cell, forIndexPath: indexPath) ?? UITableViewCell()
-    }
-
-    return UITableViewCell()
-  }
-
-  func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard viewModel.locationList[safe: indexPath.row] != nil else { return }
-    viewModel.handleSelectedCell(indexPath: indexPath)
-  }
-
-  private func configureCell(
-    _ cell: BaseTableViewCell,
-    forIndexPath indexPath: IndexPath
-  ) -> UITableViewCell? {
-    guard let location = viewModel.locationList[safe: indexPath.row] else { return nil }
-
-    cell.symbolLabel.text = String(location.name.uppercased().first ?? "U")
-    cell.titleLabel.text = location.name
-    cell.detailLabel.text = "Lat: \(location.lat), Lon: \(location.long)"
-
-    return cell
-  }
-}
+// MARK: LocationsViewProtocol
 
 extension LocationsTableViewController: LocationsViewProtocol {
   func displayNewData() {
     title = viewModel.title
-    sceneView.tableView.reloadData()
+    refreshControl.endRefreshing()
+    update(with: viewModel.locationList)
   }
 
   func displayError() {
@@ -109,5 +86,59 @@ extension LocationsTableViewController: LocationsViewProtocol {
       handler: nil
     ))
     present(alert, animated: true, completion: nil)
+  }
+}
+
+// MARK: UITableView delegate
+
+extension LocationsTableViewController: UITableViewDelegate {
+  func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
+    guard viewModel.locationList[safe: indexPath.row] != nil else { return }
+    viewModel.handleSelectedCell(indexPath: indexPath)
+  }
+}
+
+// MARK: UITableView diffable datasource
+
+extension LocationsTableViewController {
+  enum Section: CaseIterable {
+    case locations
+  }
+}
+
+extension LocationsTableViewController {
+  func update(with list: LocationList, animate: Bool = true) {
+    var snapshot = NSDiffableDataSourceSnapshot<Section, Location>()
+    snapshot.appendSections(Section.allCases)
+    snapshot.appendItems(list, toSection: .locations)
+
+    dataSource.apply(snapshot, animatingDifferences: animate)
+  }
+}
+
+// MARK: Private
+
+private extension LocationsTableViewController {
+  func retrieveLocations() {
+    viewModel.loadData()
+  }
+
+  func makeDataSource() -> UITableViewDiffableDataSource<Section, Location> {
+    let reuseIdentifier = BaseTableViewCell.reuseIdentifier
+
+    return UITableViewDiffableDataSource(
+      tableView: sceneView.tableView,
+      cellProvider: { tableView, indexPath, location in
+        let cell = tableView.dequeueReusableCell(
+          withIdentifier: reuseIdentifier,
+          for: indexPath
+        ) as! BaseTableViewCell
+
+        cell.symbolLabel.text = String(location.name.uppercased().first ?? "U")
+        cell.titleLabel.text = location.name
+        cell.detailLabel.text = "Lat: \(location.lat), Lon: \(location.long)"
+        return cell
+      }
+    )
   }
 }
