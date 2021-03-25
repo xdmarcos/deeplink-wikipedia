@@ -13,7 +13,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate, ScreenStackProtocol {
   func scene(
     _ scene: UIScene,
     willConnectTo _: UISceneSession,
-    options _: UIScene.ConnectionOptions) {
+    options _: UIScene.ConnectionOptions
+  ) {
     guard let windowScene = (scene as? UIWindowScene) else { return }
 
     window = windowForScene(windowScene)

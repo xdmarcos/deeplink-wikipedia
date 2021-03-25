@@ -11,7 +11,7 @@ import NetworkProvider
 
 struct LocationClient<Service: NetworkService>: NetworkProviderProtocol {
   let urlSession: SessionProtocol
-  
+
   init(session: SessionProtocol = Session()) {
     urlSession = session
   }

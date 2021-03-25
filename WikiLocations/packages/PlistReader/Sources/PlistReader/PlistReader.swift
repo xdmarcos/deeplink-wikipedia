@@ -1,13 +1,13 @@
 //
-//  AppDelegate.swift
-//  WikiLocations
+//  PlistReader.swift
+//  PlistReader
 //
 //  Created by xdmgzdev on 22/03/2021.
 //
 
 import Foundation
 
-public enum PlistInfo {
+public enum PlistReader {
   public enum Error: Swift.Error {
     case missingKey, invalidValue
   }

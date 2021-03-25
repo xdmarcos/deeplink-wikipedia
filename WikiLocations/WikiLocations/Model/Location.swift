@@ -44,7 +44,7 @@ private extension Location {
       }
       doubleValue = Double(stringValue)
     }
-    
+
     return doubleValue ?? 0.0
   }
 }

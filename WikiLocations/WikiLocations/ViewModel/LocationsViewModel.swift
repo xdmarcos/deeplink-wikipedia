@@ -5,6 +5,7 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
+import Common
 import UIKit
 
 class LocationsViewModel: ViewModelProtocol {
@@ -45,11 +46,12 @@ class LocationsViewModel: ViewModelProtocol {
             location.lat,
             location.long
           )
-            .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-            let openURL = URL(string: deeplinkString) else { return }
+          .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+          let openURL = URL(string: deeplinkString) else { return }
 
     guard UIApplication.shared.canOpenURL(openURL) else {
       errorMessage = "locationsViewModel_openurl_error".localized
+      DLog(errorMessage ?? "")
       view?.displayError()
       return
     }
@@ -67,6 +69,7 @@ private extension LocationsViewModel {
 
   func loadDataDidFail(error: Error) {
     errorMessage = error.localizedDescription
+    DLog(errorMessage ?? "")
     view?.displayError()
   }
 }

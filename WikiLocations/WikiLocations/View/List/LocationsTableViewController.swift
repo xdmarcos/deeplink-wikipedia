@@ -14,9 +14,9 @@ class LocationsTableViewController: UIViewController {
   private var refreshControl = UIRefreshControl()
   private lazy var dataSource = makeDataSource()
 
-    // MARK: Object lifecycle
+  // MARK: Object lifecycle
 
-    public init(viewModel: ViewModelProtocol = LocationsViewModel()) {
+  public init(viewModel: ViewModelProtocol = LocationsViewModel()) {
     self.viewModel = viewModel
     super.init(nibName: nil, bundle: nil)
     setup()
@@ -43,7 +43,7 @@ class LocationsTableViewController: UIViewController {
     title = viewModel.title
 
     refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-    refreshControl.addTarget(self, action: #selector(self.refresh(_:)), for: .valueChanged)
+    refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     sceneView.tableView.addSubview(refreshControl)
 
     sceneView.tableView.delegate = self
@@ -60,7 +60,7 @@ class LocationsTableViewController: UIViewController {
     retrieveLocations()
   }
 
-  @objc func refresh(_ sender: AnyObject) {
+  @objc func refresh(_: AnyObject) {
     retrieveLocations()
   }
 }
@@ -123,6 +123,7 @@ private extension LocationsTableViewController {
     viewModel.loadData()
   }
 
+  // swiftlint:disable force_cast
   func makeDataSource() -> UITableViewDiffableDataSource<Section, Location> {
     let reuseIdentifier = BaseTableViewCell.reuseIdentifier
 

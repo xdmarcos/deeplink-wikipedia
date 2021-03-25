@@ -5,8 +5,8 @@
 //  Created by xdmgzdev on 22/03/2021.
 //
 
+import Common
 import UIKit
-import PlistReader
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,9 +15,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     didFinishLaunchingWithOptions _: [UIApplication.LaunchOptionsKey: Any]?
   ) -> Bool {
     #if CONF_STAGE
-    print(" 🚀 - Running on STAGE configuration")
+    DLog("❗️Running on STAGE configuration")
     #elseif CONF_PROD
-    print(" 🚀 - Running on PROD configuration")
+    DLog("❗️Running on PROD configuration")
     #endif
     return true
   }
@@ -29,7 +29,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     configurationForConnecting connectingSceneSession: UISceneSession,
     options _: UIScene.ConnectionOptions
   ) -> UISceneConfiguration {
-    return UISceneConfiguration(
+    UISceneConfiguration(
       name: "Default Configuration",
       sessionRole: connectingSceneSession.role
     )

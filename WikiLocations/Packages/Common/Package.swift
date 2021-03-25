@@ -3,25 +3,26 @@
 import PackageDescription
 
 let package = Package(
-  name: "LightURLSessionDataTask",
+  name: "Common",
   platforms: [
     .macOS(.v10_13), .iOS(.v11), .tvOS(.v11),
   ],
   products: [
     .library(
-      name: "LightURLSessionDataTask",
-      targets: ["LightURLSessionDataTask"]
+      name: "Common",
+      targets: ["Common"]
     ),
   ],
-  dependencies: [],
+  dependencies: [
+  ],
   targets: [
     .target(
-      name: "LightURLSessionDataTask",
+      name: "Common",
       dependencies: []
     ),
     .testTarget(
-      name: "LightURLSessionDataTaskTests",
-      dependencies: ["LightURLSessionDataTask"]
+      name: "CommonTests",
+      dependencies: ["Common"]
     ),
   ]
 )

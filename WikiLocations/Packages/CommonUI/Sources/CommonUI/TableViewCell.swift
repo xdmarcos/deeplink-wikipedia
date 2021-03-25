@@ -1,6 +1,6 @@
 //
-//  File.swift
-//
+//  BaseTableViewCell.swift
+//  CommonUI
 //
 //  Created by xdmgzdev on 24/03/2021.
 //
@@ -10,12 +10,18 @@ public class BaseTableViewCell: UITableViewCell {
   public static let reuseIdentifier = "BaseTableViewCellReuseIdentifier"
   private enum ViewTraits {
     // Margins
-    static let cellMargins = UIEdgeInsets(top: 15.0, left: 10.0, bottom: 15.0, right: 10.0)
-    static let innerMargin: CGFloat = 10.0
+    static let sideMargin: CGFloat = 20.0
+    static let cellMargins = UIEdgeInsets(
+      top: 15.0,
+      left: sideMargin,
+      bottom: 15.0,
+      right: sideMargin
+    )
+    static let innerMargin: CGFloat = 15.0
     static let vMargin: CGFloat = 5.0
 
     // Size
-    static let typeWidth: CGFloat = 60.0
+    static let symbolWidth: CGFloat = 60.0
     static let separatorHeight: CGFloat = 1.0
 
     // Font size
@@ -25,6 +31,8 @@ public class BaseTableViewCell: UITableViewCell {
 
     // UI
     static let numberOfLines = 0
+    static let radius: CGFloat = 10.0
+    static let layerBorderWidth: CGFloat = 2.0
   }
 
   public enum Accessibility {
@@ -47,6 +55,10 @@ public class BaseTableViewCell: UITableViewCell {
     symbolLabel.textColor = .label
     symbolLabel.textAlignment = .center
     symbolLabel.accessibilityIdentifier = Accessibility.Identifier.symbolLabel
+    symbolLabel.layer.cornerRadius = ViewTraits.radius
+    symbolLabel.layer.masksToBounds = true
+    symbolLabel.layer.borderWidth = ViewTraits.layerBorderWidth
+    symbolLabel.layer.borderColor = UIColor.label.cgColor
 
     // titleLabel
     titleLabel = UILabel()
@@ -99,10 +111,10 @@ private extension BaseTableViewCell {
     NSLayoutConstraint.activate([
       symbolLabel.leadingAnchor.constraint(
         equalTo: contentView.leadingAnchor,
-        constant: ViewTraits.innerMargin
+        constant: ViewTraits.sideMargin
       ),
       symbolLabel.widthAnchor
-        .constraint(equalToConstant: ViewTraits.typeWidth),
+        .constraint(equalToConstant: ViewTraits.symbolWidth),
       symbolLabel.centerYAnchor
         .constraint(equalTo: contentView.centerYAnchor),
 

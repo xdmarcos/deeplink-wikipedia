@@ -1,0 +1,33 @@
+disabled_rules:
+  - type_body_length
+  - todo
+  - file_length
+  - function_parameter_count
+  - closure_parameter_position
+  - trailing_comma
+line_length:
+  error: 120
+  warning: 100
+type_name:
+  min_length: 4
+  max_length: 45
+identifier_name:
+  min_length: 2
+  max_length: 45
+  allowed_symbols: "_" # Due to high ammount of legacy using snake case notation for constants
+  validates_start_with_lowercase: false # Due to linter currently not supporting underscore prefixes which are common and permitted by the guidelines
+  excluded:
+    - x
+    - y
+    - z
+large_tuple:
+   - 4
+   - 6
+nesting:
+    type_level: 4
+reporter: "xcode" # reporter type (xcode, json, csv, checkstyle)
+excluded:
+  - WikiLocationsTests/
+  - ../wikipedia-ios-main/
+  
+  

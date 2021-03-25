@@ -5,9 +5,6 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
-import Foundation
-import NetworkProvider
-
 struct LocationRepository: LocationRepositoryProtocol {
   let locationClient: LocationClient<LocationService>
 

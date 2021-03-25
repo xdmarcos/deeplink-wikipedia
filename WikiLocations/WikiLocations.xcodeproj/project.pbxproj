@@ -9,13 +9,14 @@
 /* Begin PBXBuildFile section */
 		7A0C2E3E260A837800C57C14 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C2E3D260A837800C57C14 /* LocationsViewModel.swift */; };
 		7A0C2EA0260A914400C57C14 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */; };
+		7A2629BE260CA0BC00B4FBF7 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2629BD260CA0BC00B4FBF7 /* Common */; };
+		7A2629C8260CA40700B4FBF7 /* WikiLocationsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A2629C7260CA40700B4FBF7 /* WikiLocationsTests.swift */; };
 		7A42100A260A49E000280D35 /* LightURLSessionDataTask in Frameworks */ = {isa = PBXBuildFile; productRef = 7A421009260A49E000280D35 /* LightURLSessionDataTask */; };
 		7A42100C260A49E400280D35 /* NetworkProvider in Frameworks */ = {isa = PBXBuildFile; productRef = 7A42100B260A49E400280D35 /* NetworkProvider */; };
 		7A421028260A68A700280D35 /* LocationClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A421027260A68A700280D35 /* LocationClient.swift */; };
 		7A42102C260A68B300280D35 /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A42102B260A68B300280D35 /* Location.swift */; };
 		7A421030260A69A900280D35 /* LocationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A42102F260A69A900280D35 /* LocationService.swift */; };
 		7A43E36F260B66B9004FF429 /* ViewModelProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A43E36E260B66B9004FF429 /* ViewModelProtocol.swift */; };
-		7A633C60260B5ECE004121DE /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A633C5F260B5ECE004121DE /* Extensions.swift */; };
 		7A710F20260A7C81009FBA2C /* LocationJson.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A710F1F260A7C81009FBA2C /* LocationJson.swift */; };
 		7A710F23260A7E1F009FBA2C /* LocationRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A710F22260A7E1F009FBA2C /* LocationRepositoryProtocol.swift */; };
 		7A710F28260A80AA009FBA2C /* LocationRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A710F27260A80AA009FBA2C /* LocationRepository.swift */; };
@@ -32,14 +33,26 @@
 		7AE92ADC260B5447004B94A2 /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7AE92ADB260B5447004B94A2 /* CommonUI */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		7A2629CA260CA40700B4FBF7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 7AC9275726095268005D7E9C /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 7AC9275E26095269005D7E9C;
+			remoteInfo = WikiLocations;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		7A0C2E3D260A837800C57C14 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
+		7A2629C5260CA40700B4FBF7 /* WikiLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		7A2629C7260CA40700B4FBF7 /* WikiLocationsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WikiLocationsTests.swift; sourceTree = "<group>"; };
+		7A2629C9260CA40700B4FBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A421027260A68A700280D35 /* LocationClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationClient.swift; sourceTree = "<group>"; };
 		7A42102B260A68B300280D35 /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
 		7A42102F260A69A900280D35 /* LocationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationService.swift; sourceTree = "<group>"; };
 		7A43E36E260B66B9004FF429 /* ViewModelProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelProtocol.swift; sourceTree = "<group>"; };
-		7A633C5F260B5ECE004121DE /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		7A710F1F260A7C81009FBA2C /* LocationJson.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationJson.swift; sourceTree = "<group>"; };
 		7A710F22260A7E1F009FBA2C /* LocationRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryProtocol.swift; sourceTree = "<group>"; };
 		7A710F27260A80AA009FBA2C /* LocationRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepository.swift; sourceTree = "<group>"; };
@@ -67,10 +80,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		7A2629C2260CA40700B4FBF7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7AC9275C26095269005D7E9C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A2629BE260CA0BC00B4FBF7 /* Common in Frameworks */,
 				7A42100C260A49E400280D35 /* NetworkProvider in Frameworks */,
 				7A855719260A3189001F9AD8 /* PlistReader in Frameworks */,
 				7A42100A260A49E000280D35 /* LightURLSessionDataTask in Frameworks */,
@@ -99,6 +120,15 @@
 			path = List;
 			sourceTree = "<group>";
 		};
+		7A2629C6260CA40700B4FBF7 /* WikiLocationsTests */ = {
+			isa = PBXGroup;
+			children = (
+				7A2629C7260CA40700B4FBF7 /* WikiLocationsTests.swift */,
+				7A2629C9260CA40700B4FBF7 /* Info.plist */,
+			);
+			path = WikiLocationsTests;
+			sourceTree = "<group>";
+		};
 		7A421025260A687800280D35 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
@@ -115,14 +145,6 @@
 				7A710F1F260A7C81009FBA2C /* LocationJson.swift */,
 			);
 			path = Model;
-			sourceTree = "<group>";
-		};
-		7A633C5E260B5EC0004121DE /* Helpers */ = {
-			isa = PBXGroup;
-			children = (
-				7A633C5F260B5ECE004121DE /* Extensions.swift */,
-			);
-			path = Helpers;
 			sourceTree = "<group>";
 		};
 		7A710F2B260A81E7009FBA2C /* Services */ = {
@@ -145,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC9276126095269005D7E9C /* WikiLocations */,
+				7A2629C6260CA40700B4FBF7 /* WikiLocationsTests */,
 				7AC9276026095269005D7E9C /* Products */,
 				7A855717260A3189001F9AD8 /* Frameworks */,
 			);
@@ -154,6 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				7AC9275F26095269005D7E9C /* WikiLocations.app */,
+				7A2629C5260CA40700B4FBF7 /* WikiLocationsTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -177,7 +201,6 @@
 				7AC9276226095269005D7E9C /* AppDelegate.swift */,
 				7AC9276426095269005D7E9C /* SceneDelegate.swift */,
 				7AC927BC2609F0AE005D7E9C /* ScreenStackProtocol.swift */,
-				7A633C5E260B5EC0004121DE /* Helpers */,
 				7AC927EB2609FFF6005D7E9C /* Configurations */,
 				7AC927C32609F4CA005D7E9C /* Supporting Files */,
 			);
@@ -218,10 +241,29 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		7A2629C4260CA40700B4FBF7 /* WikiLocationsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7A2629CC260CA40700B4FBF7 /* Build configuration list for PBXNativeTarget "WikiLocationsTests" */;
+			buildPhases = (
+				7A2629C1260CA40700B4FBF7 /* Sources */,
+				7A2629C2260CA40700B4FBF7 /* Frameworks */,
+				7A2629C3260CA40700B4FBF7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				7A2629CB260CA40700B4FBF7 /* PBXTargetDependency */,
+			);
+			name = WikiLocationsTests;
+			productName = WikiLocationsTests;
+			productReference = 7A2629C5260CA40700B4FBF7 /* WikiLocationsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		7AC9275E26095269005D7E9C /* WikiLocations */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7AC927732609526B005D7E9C /* Build configuration list for PBXNativeTarget "WikiLocations" */;
 			buildPhases = (
+				7A2629D3260CAA5000B4FBF7 /* Swiftlint */,
 				7AC9275B26095269005D7E9C /* Sources */,
 				7AC9275C26095269005D7E9C /* Frameworks */,
 				7AC9275D26095269005D7E9C /* Resources */,
@@ -236,6 +278,7 @@
 				7A421009260A49E000280D35 /* LightURLSessionDataTask */,
 				7A42100B260A49E400280D35 /* NetworkProvider */,
 				7AE92ADB260B5447004B94A2 /* CommonUI */,
+				7A2629BD260CA0BC00B4FBF7 /* Common */,
 			);
 			productName = WikiLocations;
 			productReference = 7AC9275F26095269005D7E9C /* WikiLocations.app */;
@@ -250,6 +293,10 @@
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
+					7A2629C4260CA40700B4FBF7 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 7AC9275E26095269005D7E9C;
+					};
 					7AC9275E26095269005D7E9C = {
 						CreatedOnToolsVersion = 12.4;
 					};
@@ -271,11 +318,19 @@
 			projectRoot = "";
 			targets = (
 				7AC9275E26095269005D7E9C /* WikiLocations */,
+				7A2629C4260CA40700B4FBF7 /* WikiLocationsTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		7A2629C3260CA40700B4FBF7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7AC9275D26095269005D7E9C /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,7 +344,36 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		7A2629D3260CAA5000B4FBF7 /* Swiftlint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = Swiftlint;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint lint --config .swiftlint.yml\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nexit 1\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		7A2629C1260CA40700B4FBF7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A2629C8260CA40700B4FBF7 /* WikiLocationsTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		7AC9275B26095269005D7E9C /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -308,11 +392,18 @@
 				7A710F23260A7E1F009FBA2C /* LocationRepositoryProtocol.swift in Sources */,
 				7AC9276526095269005D7E9C /* SceneDelegate.swift in Sources */,
 				7A940500260B723500600FBB /* LocationsViewProtocol.swift in Sources */,
-				7A633C60260B5ECE004121DE /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		7A2629CB260CA40700B4FBF7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 7AC9275E26095269005D7E9C /* WikiLocations */;
+			targetProxy = 7A2629CA260CA40700B4FBF7 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		7AC9276D2609526B005D7E9C /* LaunchScreen.storyboard */ = {
@@ -349,6 +440,294 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		7A2629CD260CA40700B4FBF7 /* Debug_STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BSYPP7R75C;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WikiLocationsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiLocations.app/WikiLocations";
+			};
+			name = Debug_STAGE;
+		};
+		7A2629CE260CA40700B4FBF7 /* Debug_PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = BSYPP7R75C;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WikiLocationsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiLocations.app/WikiLocations";
+			};
+			name = Debug_PROD;
+		};
+		7A2629CF260CA40700B4FBF7 /* Release_STAGE */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BSYPP7R75C;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WikiLocationsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiLocations.app/WikiLocations";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release_STAGE;
+		};
+		7A2629D0260CA40700B4FBF7 /* Release_PROD */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = BSYPP7R75C;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_FILE = WikiLocationsTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = gz.xdmdev.WikiLocationsTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/WikiLocations.app/WikiLocations";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release_PROD;
+		};
 		7AB76A52260A0984009A2DAB /* Release_PROD */ = {
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7A9C0375260A1D5300B0CA6A /* WikiLocations-prod.xcconfig */;
@@ -670,6 +1049,17 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		7A2629CC260CA40700B4FBF7 /* Build configuration list for PBXNativeTarget "WikiLocationsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7A2629CD260CA40700B4FBF7 /* Debug_STAGE */,
+				7A2629CE260CA40700B4FBF7 /* Debug_PROD */,
+				7A2629CF260CA40700B4FBF7 /* Release_STAGE */,
+				7A2629D0260CA40700B4FBF7 /* Release_PROD */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release_PROD;
+		};
 		7AC9275A26095269005D7E9C /* Build configuration list for PBXProject "WikiLocations" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -695,6 +1085,10 @@
 /* End XCConfigurationList section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		7A2629BD260CA0BC00B4FBF7 /* Common */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = Common;
+		};
 		7A421009260A49E000280D35 /* LightURLSessionDataTask */ = {
 			isa = XCSwiftPackageProductDependency;
 			productName = LightURLSessionDataTask;

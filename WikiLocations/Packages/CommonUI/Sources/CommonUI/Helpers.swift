@@ -1,31 +1,11 @@
 //
-//  File.swift
-//
+//  Helpers.swift
+//  CommonUI
 //
 //  Created by xdmgzdev on 24/03/2021.
 //
 
 import UIKit
-
-public extension UIView {
-  func addSubviewForAutolayout(subview: UIView) {
-    subview.translatesAutoresizingMaskIntoConstraints = false
-    addSubview(subview)
-  }
-
-  func addSubviewsForAutolayout(subviews: [UIView]) {
-    for subview in subviews {
-      subview.translatesAutoresizingMaskIntoConstraints = false
-      addSubview(subview)
-    }
-  }
-}
-
-public extension UIImage {
-  enum NavigationBar {
-    static var back: UIImage? { return UIImage(named: Identifiers.navBarBackButtonImage) }
-  }
-}
 
 public enum ScreenSize {
   static let width = UIScreen.main.bounds.width

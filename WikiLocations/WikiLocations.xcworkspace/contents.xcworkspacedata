@@ -8,6 +8,9 @@
       location = "container:Packages"
       name = "Packages">
       <FileRef
+         location = "group:Common">
+      </FileRef>
+      <FileRef
          location = "group:CommonUI">
       </FileRef>
       <FileRef

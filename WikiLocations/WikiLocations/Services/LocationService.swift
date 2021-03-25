@@ -9,26 +9,27 @@ import Foundation
 import NetworkProvider
 import PlistReader
 
+// swiftlint:disable force_try
 struct LocationService: NetworkService {
   var baseURL: String {
-    let apiNaseURL: String = try! PlistInfo.value(for: "API_BASE_URL")
+    let apiNaseURL: String = try! PlistReader.value(for: "API_BASE_URL")
     return "https://\(apiNaseURL)"
   }
 
   var method: HttpMethod {
-    return .get
+    .get
   }
 
   var httpBody: Encodable? {
-    return nil
+    nil
   }
 
   var headers: [String: String]? {
-    return nil
+    nil
   }
-  
+
   var queryParameters: [URLQueryItem]? {
-    return nil
+    nil
   }
 
   var path: String {
