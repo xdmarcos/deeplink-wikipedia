@@ -9,15 +9,16 @@ import Foundation
 import LightURLSessionDataTask
 import NetworkProvider
 
-struct LocationClient<Service: NetworkService>: NetworkProviderProtocol {
+struct LocationClient: NetworkProviderProtocol {
+  let service: NetworkService
   let urlSession: SessionProtocol
 
-  init(session: SessionProtocol = Session()) {
-    urlSession = session
+  init(session: SessionProtocol = Session(), service: NetworkService = LocationService()) {
+    self.urlSession = session
+    self.service = service
   }
 
   func request<T>(
-    service: Service,
     dataType: T.Type,
     deliverQueue: DispatchQueue = .main,
     completion: @escaping (Result<T, Swift.Error>) -> Void

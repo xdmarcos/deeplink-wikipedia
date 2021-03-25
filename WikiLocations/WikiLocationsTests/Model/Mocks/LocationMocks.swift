@@ -21,9 +21,7 @@ enum LocationsMocks {
     "long": "-8.9843"
   }
   """
-
-
-
+  
   static let numberJson = """
   {
     "name": "City",

@@ -169,7 +169,6 @@ class LocationsViewModelTests: XCTestCase {
 
     let properlyHandled = sut.handleSelectedCell(indexPath: indexPath)
 
-    XCTAssertNil(sut.errorMessage)
     XCTAssertEqual(properlyHandled, expectedResult)
   }
 
@@ -185,7 +184,6 @@ class LocationsViewModelTests: XCTestCase {
 
     let properlyHandled = sut.handleSelectedCell(indexPath: indexPath)
 
-    XCTAssertNil(sut.errorMessage)
     XCTAssertEqual(properlyHandled, expectedResult)
   }
 

@@ -5,29 +5,27 @@
 //  Created by xdmgzdev on 23/03/2021.
 //
 
-struct LocationRepository: LocationRepositoryProtocol {
-  let locationClient: LocationClient<LocationService>
+import NetworkProvider
 
-  init(locationClient: LocationClient<LocationService> = LocationClient<LocationService>()) {
-    self.locationClient = locationClient
+struct LocationRepository: LocationRepositoryProtocol {
+  let client: NetworkProviderProtocol
+
+  init(locationClient: NetworkProviderProtocol = LocationClient()) {
+    client = locationClient
   }
 
   func getLocations(completion: @escaping (Result<LocationList, Swift.Error>) -> Void) {
     #if CONF_STAGE
-    locationClient.request(
-      service: LocationService(),
-      dataType: LocationList.self,
-      completion: completion
-    )
+    client.request(dataType: LocationList.self, deliverQueue: .main, completion: completion)
     #elseif CONF_PROD
-    locationClient.request(service: LocationService(), dataType: LocationJson.self) { result in
-      switch result {
-      case let .success(locationJson):
-        completion(.success(locationJson.locations))
-      case let .failure(error):
-        completion(.failure(error))
+    client.request(dataType: LocationJson.self, deliverQueue: .main) { result in
+        switch result {
+        case let .success(locationJson):
+          completion(.success(locationJson.locations))
+        case let .failure(error):
+          completion(.failure(error))
+        }
       }
-    }
     #endif
   }
 }

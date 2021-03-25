@@ -93,7 +93,8 @@ extension LocationsTableViewController: LocationsViewProtocol {
 
 extension LocationsTableViewController: UITableViewDelegate {
   func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard viewModel.locationList[safe: indexPath.row] != nil else { return }
+    guard let viewModel = viewModel as? LocationsViewModel,
+    viewModel.locationList[safe: indexPath.row] != nil else { return }
     viewModel.handleSelectedCell(indexPath: indexPath)
   }
 }
