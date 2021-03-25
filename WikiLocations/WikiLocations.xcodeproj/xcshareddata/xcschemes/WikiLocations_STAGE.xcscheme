@@ -38,6 +38,56 @@
                ReferencedContainer = "container:WikiLocations.xcodeproj">
             </BuildableReference>
          </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CommonTests"
+               BuildableName = "CommonTests"
+               BlueprintName = "CommonTests"
+               ReferencedContainer = "container:Packages/Common">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "CommonUITests"
+               BuildableName = "CommonUITests"
+               BlueprintName = "CommonUITests"
+               ReferencedContainer = "container:Packages/CommonUI">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "LightURLSessionDataTaskTests"
+               BuildableName = "LightURLSessionDataTaskTests"
+               BlueprintName = "LightURLSessionDataTaskTests"
+               ReferencedContainer = "container:Packages/LightURLSessionDataTask">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "NetworkProviderTests"
+               BuildableName = "NetworkProviderTests"
+               BlueprintName = "NetworkProviderTests"
+               ReferencedContainer = "container:Packages/NetworkProvider">
+            </BuildableReference>
+         </TestableReference>
+         <TestableReference
+            skipped = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "PlistReaderTests"
+               BuildableName = "PlistReaderTests"
+               BlueprintName = "PlistReaderTests"
+               ReferencedContainer = "container:Packages/PlistReader">
+            </BuildableReference>
+         </TestableReference>
       </Testables>
    </TestAction>
    <LaunchAction

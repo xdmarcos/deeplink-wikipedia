@@ -14,5 +14,5 @@ protocol ViewModelProtocol {
   var numberOfSections: Int { get }
   var errorMessage: String? { get }
   func loadData()
-  func handleSelectedCell(indexPath: IndexPath)
+  func handleSelectedCell(indexPath: IndexPath) -> Bool
 }

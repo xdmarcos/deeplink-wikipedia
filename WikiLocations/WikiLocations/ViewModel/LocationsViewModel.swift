@@ -38,29 +38,38 @@ class LocationsViewModel: ViewModelProtocol {
     }
   }
 
-  func handleSelectedCell(indexPath: IndexPath) {
+  @discardableResult
+  func handleSelectedCell(indexPath: IndexPath) -> Bool {
     guard let location = locationList[safe: indexPath.row],
-          let deeplinkString = String(
-            format: ViewModelConst.deeplinkFormat,
-            location.name,
-            location.lat,
-            location.long
-          )
-          .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
-          let openURL = URL(string: deeplinkString) else { return }
+          let openURL = URL(string: deepLinkString(location))
+    else {
+      DLog("❌ Error: creating deeplink URL")
+      return false
+    }
 
-    guard UIApplication.shared.canOpenURL(openURL) else {
+    performOpenURL(url: openURL)
+    // handled successfuly
+    return true
+  }
+
+  func deepLinkString(_ location: Location) -> String {
+    String(format: ViewModelConst.deeplinkFormat, location.name, location.lat, location.long)
+      .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
+  }
+}
+
+private extension LocationsViewModel {
+  func performOpenURL(url: URL) {
+    guard UIApplication.shared.canOpenURL(url) else {
       errorMessage = "locationsViewModel_openurl_error".localized
       DLog(errorMessage ?? "")
       view?.displayError()
       return
     }
 
-    UIApplication.shared.open(openURL, options: [:], completionHandler: nil)
+    UIApplication.shared.open(url, options: [:], completionHandler: nil)
   }
-}
 
-private extension LocationsViewModel {
   func loadDataDidSuccess(locations: LocationList) {
     title = "\(ViewModelConst.title)(\(locations.count))"
     locationList = locations

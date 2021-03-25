@@ -27,6 +27,12 @@ struct Location: Decodable, Hashable, Equatable {
     lat = Self.ensureDoubleValue(container, forKey: .lat)
     long = Self.ensureDoubleValue(container, forKey: .long)
   }
+
+  init(name: String, lat: Double, lon: Double) {
+    self.name = name
+    self.lat = lat
+    self.long = lon
+  }
 }
 
 private extension Location {
