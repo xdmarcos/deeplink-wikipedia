@@ -5,10 +5,10 @@
 //  Created by xdmgzdev on 25/03/2021.
 //
 
-@testable import WikiLocations
 import Foundation
 import LightURLSessionDataTask
 import NetworkProvider
+@testable import WikiLocations
 
 enum LocationClientMocks {
   enum ClientError: Swift.Error {
