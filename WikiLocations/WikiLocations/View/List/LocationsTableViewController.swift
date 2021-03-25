@@ -42,7 +42,7 @@ class LocationsTableViewController: UIViewController {
 
     title = viewModel.title
 
-    refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+    refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh".localized)
     refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     sceneView.tableView.addSubview(refreshControl)
 

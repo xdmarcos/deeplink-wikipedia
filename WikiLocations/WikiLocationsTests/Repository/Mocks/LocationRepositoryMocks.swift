@@ -24,7 +24,7 @@ enum LocationRepositoryMocks {
   }
 
   static func clientSucessMock() -> NetworkProviderProtocol {
-    #if CONf_STAGE
+    #if CONF_STAGE
     let successResult: Result<LocationList, Swift.Error> = .success(locationListTest)
     #elseif CONF_PROD
     let successResult: Result<LocationJson, Swift.Error> = .success(locationJsonTest)

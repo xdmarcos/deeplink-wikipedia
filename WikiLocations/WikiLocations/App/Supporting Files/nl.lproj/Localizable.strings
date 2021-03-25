@@ -10,4 +10,5 @@
 "locationsTableVC_title" = "Locaties";
 "locationsTableVC_alert_error" = "Error";
 "locationsTableVC_alert_ok" = "OK";
+"locationsTableVC_refresh_title" = "Trek om te vernieuwen";
 "locationsViewModel_openurl_error" = "Wikipedia iOS-app moet zijn geïnstalleerd.";
