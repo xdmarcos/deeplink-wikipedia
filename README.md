@@ -15,19 +15,19 @@ Marcos A. González Piñeiro
 - **wikipedia-ios-main:** Contains the modified Wikipedia iOS Application 
 
 - Wikilocations, has 2 schemes (PROD and STAGE) this was meant just to demonstrate a possible project configuration for 2 environments.
-- For the purpose of the assessment PROD should be used since it's pointing to the provided [resource](https://raw.githubusercontent.com/abnamrocoesd/assignment- ios/main/locations.json)
+- For the purpose of the assessment PROD should be used since it's pointing to the provided [resource](https://raw.githubusercontent.com/abnamrocoesd/assignment-ios/main/locations.json)
 - Stage scheme will fetch locations from a mocked server.
 
 ## Usage
 
-First the modified wikipedia project should be open, build and run in the simulator/device.
-Once this is done, open Wikilocations `workspace` select `Wikiocations` scheme, and simple build and run on the same simulator/device.
+First, the modified wikipedia project should be open, build and run in the simulator/device.
+Once this is done, open Wikilocations.workspace` select `Wikiocations` scheme, and simple build and run on the same simulator/device.
 
 ------
 
 ## Features
 
-- ✅ Find locations from two different APIs, the PROD (ABN provided) and STAGE (mocked API)
+- ✅ Find locations from two different APIs, the PROD (provided in assignment) and STAGE (mocked API)
 - ✅ Display content of the selected API in a UITableView with Diffable datasources.
 - ✅ All the UI is written programmatically using UIKit and Autolayout.
 - ✅ Wikipedia project was modified to understand deeplinks to Places tab whith the selected location.
