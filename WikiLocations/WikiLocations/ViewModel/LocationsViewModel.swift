@@ -14,7 +14,7 @@ class LocationsViewModel: ViewModelProtocol {
     static let deeplinkFormat = "wikipedia://places/location?name=%@&lat=%f&lon=%f"
   }
 
-  var view: LocationsViewProtocol?
+  weak var view: LocationsViewProtocol?
   var title = ViewModelConst.title
   var errorMessage: String?
   var numberOfSections = 1

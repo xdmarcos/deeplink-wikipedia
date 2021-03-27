@@ -5,7 +5,7 @@
 //  Created by xdmgzdev on 24/03/2021.
 //
 
-protocol LocationsViewProtocol {
+protocol LocationsViewProtocol: AnyObject {
   func displayNewData()
   func displayError()
 }
