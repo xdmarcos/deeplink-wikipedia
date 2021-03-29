@@ -11,7 +11,7 @@ import UIKit
 class LocationsViewModel: ViewModelProtocol {
   var locationList: LocationList = []
   weak var output: LocationsViewProtocol?
-  var state: ViewRepresentable = ViewState()
+  var state = ViewState()
   let locationsRepo: LocationRepositoryProtocol
 
   init(locationsRepository: LocationRepositoryProtocol = LocationRepository()) {
@@ -49,10 +49,9 @@ class LocationsViewModel: ViewModelProtocol {
 private extension LocationsViewModel {
   func performOpenURL(url: URL) {
     guard UIApplication.shared.canOpenURL(url) else {
-      guard var state = state as? ViewState else { return }
       let errorMessage = "locationsViewModel_openurl_error".localized
-      state.errorMessage = errorMessage
       DLog(errorMessage)
+      state.errorMessage = errorMessage
 
       output?.displayError()
       return
@@ -64,7 +63,6 @@ private extension LocationsViewModel {
   func loadDataDidSuccess(locations: LocationList) {
     locationList = locations
 
-    guard var state = state as? ViewState else { return }
     let title = Converter.convert(locationsNumber: locationList.count)
     let locationsInfo = Converter.convert(locations: locationList)
     state.titleNavBar = title
@@ -76,8 +74,6 @@ private extension LocationsViewModel {
   func loadDataDidFail(error: Error) {
     let errorMessage = error.localizedDescription
     DLog(errorMessage)
-
-    guard var state = state as? ViewState else { return }
     state.errorMessage = errorMessage
 
     output?.displayError()

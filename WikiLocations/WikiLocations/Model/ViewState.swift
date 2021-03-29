@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ViewState: ViewRepresentable {
+struct ViewState {
   var titleNavBar: String
   var locations: [LocationInfo]
   var errorMessage: String?

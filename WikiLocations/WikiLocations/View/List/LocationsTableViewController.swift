@@ -67,17 +67,15 @@ class LocationsTableViewController: UIViewController {
 
 extension LocationsTableViewController: LocationsViewProtocol {
   func displayNewData() {
-    guard let state = viewModel.state as? ViewState else { return }
-    title = state.titleNavBar
+    title = viewModel.state.titleNavBar
     refreshControl.endRefreshing()
-    update(with: state.locations)
+    update(with: viewModel.state.locations)
   }
 
   func displayError() {
-    guard let state = viewModel.state as? ViewState else { return }
     let alert = UIAlertController(
       title: "locationsTableVC_alert_error".localized,
-      message: state.errorMessage,
+      message: viewModel.state.errorMessage,
       preferredStyle: .alert
     )
     alert.addAction(UIAlertAction(
