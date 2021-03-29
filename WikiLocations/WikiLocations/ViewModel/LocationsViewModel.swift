@@ -17,7 +17,6 @@ class LocationsViewModel: ViewModelProtocol {
   weak var output: LocationsViewProtocol?
   var title = ViewModelConst.title
   var errorMessage: String?
-  var numberOfSections = 1
   var locationList: LocationList = []
   let locationsRepo: LocationRepositoryProtocol
 

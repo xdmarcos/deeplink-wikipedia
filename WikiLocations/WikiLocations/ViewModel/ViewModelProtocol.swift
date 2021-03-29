@@ -11,7 +11,6 @@ protocol ViewModelProtocol {
   var output: LocationsViewProtocol? { get set }
   var title: String { get }
   var locationList: LocationList { get }
-  var numberOfSections: Int { get }
   var errorMessage: String? { get }
   func loadData()
   func handleSelectedCell(indexPath: IndexPath) -> Bool
