@@ -9,8 +9,7 @@ import Common
 import UIKit
 
 class LocationsViewModel: ViewModelProtocol {
-  private var locationList: LocationList = []
-
+  var locationList: LocationList = []
   weak var output: LocationsViewProtocol?
   var state: ViewState = ViewState()
   let locationsRepo: LocationRepositoryProtocol
