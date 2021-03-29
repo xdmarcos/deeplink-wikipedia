@@ -9,9 +9,7 @@ import Foundation
 
 protocol ViewModelProtocol {
   var output: LocationsViewProtocol? { get set }
-  var title: String { get }
-  var locationList: LocationList { get }
-  var errorMessage: String? { get }
+  var state: ViewState { get }
   func loadData()
   func handleSelectedCell(indexPath: IndexPath) -> Bool
 }

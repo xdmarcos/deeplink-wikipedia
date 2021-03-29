@@ -40,8 +40,6 @@ class LocationsTableViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
 
-    title = viewModel.title
-
     refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh".localized)
     refreshControl.addTarget(self, action: #selector(refresh(_:)), for: .valueChanged)
     sceneView.tableView.addSubview(refreshControl)
@@ -69,15 +67,15 @@ class LocationsTableViewController: UIViewController {
 
 extension LocationsTableViewController: LocationsViewProtocol {
   func displayNewData() {
-    title = viewModel.title
+    title = viewModel.state.titleNavBar
     refreshControl.endRefreshing()
-    update(with: viewModel.locationList)
+    update(with: viewModel.state.locations)
   }
 
   func displayError() {
     let alert = UIAlertController(
       title: "locationsTableVC_alert_error".localized,
-      message: viewModel.errorMessage,
+      message: viewModel.state.errorMessage,
       preferredStyle: .alert
     )
     alert.addAction(UIAlertAction(
@@ -93,23 +91,15 @@ extension LocationsTableViewController: LocationsViewProtocol {
 
 extension LocationsTableViewController: UITableViewDelegate {
   func tableView(_: UITableView, didSelectRowAt indexPath: IndexPath) {
-    guard let viewModel = viewModel as? LocationsViewModel,
-    viewModel.locationList[safe: indexPath.row] != nil else { return }
+    guard let viewModel = viewModel as? LocationsViewModel else { return }
     viewModel.handleSelectedCell(indexPath: indexPath)
   }
 }
 
 // MARK: UITableView diffable datasource
-
 extension LocationsTableViewController {
-  enum Section: CaseIterable {
-    case locations
-  }
-}
-
-extension LocationsTableViewController {
-  func update(with list: LocationList, animate: Bool = true) {
-    var snapshot = NSDiffableDataSourceSnapshot<Section, Location>()
+  func update(with list: [LocationInfo], animate: Bool = true) {
+    var snapshot = NSDiffableDataSourceSnapshot<Section, LocationInfo>()
     snapshot.appendSections(Section.allCases)
     snapshot.appendItems(list, toSection: .locations)
 
@@ -125,7 +115,7 @@ private extension LocationsTableViewController {
   }
 
   // swiftlint:disable force_cast
-  func makeDataSource() -> UITableViewDiffableDataSource<Section, Location> {
+  func makeDataSource() -> UITableViewDiffableDataSource<Section, LocationInfo> {
     let reuseIdentifier = BaseTableViewCell.reuseIdentifier
 
     return UITableViewDiffableDataSource(
@@ -136,9 +126,9 @@ private extension LocationsTableViewController {
           for: indexPath
         ) as! BaseTableViewCell
 
-        cell.symbolLabel.text = String(location.name.uppercased().first ?? "U")
-        cell.titleLabel.text = location.name
-        cell.detailLabel.text = "Lat: \(location.lat), Lon: \(location.long)"
+        cell.symbolLabel.text = location.symbol
+        cell.titleLabel.text = location.title
+        cell.detailLabel.text = location.detail
         return cell
       }
     )

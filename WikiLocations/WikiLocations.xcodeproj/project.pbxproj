@@ -11,6 +11,7 @@
 		7A04B9A2260D179200EC55C0 /* LocationRepositoryMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A04B9A1260D179200EC55C0 /* LocationRepositoryMocks.swift */; };
 		7A0C2E3E260A837800C57C14 /* LocationsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C2E3D260A837800C57C14 /* LocationsViewModel.swift */; };
 		7A0C2EA0260A914400C57C14 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */; };
+		7A0F4D942611EB38006B5F04 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F4D932611EB38006B5F04 /* Converter.swift */; };
 		7A2629BE260CA0BC00B4FBF7 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2629BD260CA0BC00B4FBF7 /* Common */; };
 		7A262A3C260CAFC200B4FBF7 /* LocationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A262A3B260CAFC200B4FBF7 /* LocationsViewModelTests.swift */; };
 		7A262A44260CB0D700B4FBF7 /* LocationsViewModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A262A43260CB0D700B4FBF7 /* LocationsViewModelMocks.swift */; };
@@ -38,6 +39,7 @@
 		7AC927D92609FDA4005D7E9C /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AC927DB2609FDA4005D7E9C /* Localizable.strings */; };
 		7AC927E42609FEA8005D7E9C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7AC927E62609FEA8005D7E9C /* InfoPlist.strings */; };
 		7AE92ADC260B5447004B94A2 /* CommonUI in Frameworks */ = {isa = PBXBuildFile; productRef = 7AE92ADB260B5447004B94A2 /* CommonUI */; };
+		7AF1B4582611E77B00123F05 /* ViewState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AF1B4572611E77B00123F05 /* ViewState.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -55,6 +57,7 @@
 		7A04B9A1260D179200EC55C0 /* LocationRepositoryMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationRepositoryMocks.swift; sourceTree = "<group>"; };
 		7A0C2E3D260A837800C57C14 /* LocationsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModel.swift; sourceTree = "<group>"; };
 		7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
+		7A0F4D932611EB38006B5F04 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		7A2629C5260CA40700B4FBF7 /* WikiLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2629C9260CA40700B4FBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A262A3B260CAFC200B4FBF7 /* LocationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModelTests.swift; sourceTree = "<group>"; };
@@ -91,6 +94,7 @@
 		7AC927E82609FEAB005D7E9C /* nl */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = nl; path = nl.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7AC927E92609FEAC005D7E9C /* es */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = es; path = es.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7AC92823260A0081005D7E9C /* WikiLocations.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = WikiLocations.xcconfig; sourceTree = "<group>"; };
+		7AF1B4572611E77B00123F05 /* ViewState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewState.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -138,6 +142,7 @@
 			children = (
 				7A43E36E260B66B9004FF429 /* ViewModelProtocol.swift */,
 				7A0C2E3D260A837800C57C14 /* LocationsViewModel.swift */,
+				7A0F4D932611EB38006B5F04 /* Converter.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -194,6 +199,7 @@
 			children = (
 				7A42102B260A68B300280D35 /* Location.swift */,
 				7A710F1F260A7C81009FBA2C /* LocationJson.swift */,
+				7AF1B4572611E77B00123F05 /* ViewState.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -473,6 +479,8 @@
 			files = (
 				7A421030260A69A900280D35 /* LocationService.swift in Sources */,
 				7AC9276726095269005D7E9C /* RootViewController.swift in Sources */,
+				7A0F4D942611EB38006B5F04 /* Converter.swift in Sources */,
+				7AF1B4582611E77B00123F05 /* ViewState.swift in Sources */,
 				7AC9276326095269005D7E9C /* AppDelegate.swift in Sources */,
 				7A421028260A68A700280D35 /* LocationClient.swift in Sources */,
 				7A43E36F260B66B9004FF429 /* ViewModelProtocol.swift in Sources */,

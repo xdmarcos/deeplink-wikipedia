@@ -9,15 +9,10 @@ import Common
 import UIKit
 
 class LocationsViewModel: ViewModelProtocol {
-  private enum ViewModelConst {
-    static let title = "locationsTableVC_title".localized
-    static let deeplinkFormat = "wikipedia://places/location?name=%@&lat=%f&lon=%f"
-  }
+  private var locationList: LocationList = []
 
   weak var output: LocationsViewProtocol?
-  var title = ViewModelConst.title
-  var errorMessage: String?
-  var locationList: LocationList = []
+  var state: ViewState = ViewState()
   let locationsRepo: LocationRepositoryProtocol
 
   init(locationsRepository: LocationRepositoryProtocol = LocationRepository()) {
@@ -40,7 +35,7 @@ class LocationsViewModel: ViewModelProtocol {
   @discardableResult
   func handleSelectedCell(indexPath: IndexPath) -> Bool {
     guard let location = locationList[safe: indexPath.row],
-          let openURL = URL(string: deepLinkString(location))
+          let openURL = URL(string: Converter.deepLinkString(location))
     else {
       DLog("❌ Error: creating deeplink URL")
       return false
@@ -50,18 +45,15 @@ class LocationsViewModel: ViewModelProtocol {
     // handled successfuly
     return true
   }
-
-  func deepLinkString(_ location: Location) -> String {
-    String(format: ViewModelConst.deeplinkFormat, location.name, location.lat, location.long)
-      .addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) ?? ""
-  }
 }
 
 private extension LocationsViewModel {
   func performOpenURL(url: URL) {
     guard UIApplication.shared.canOpenURL(url) else {
-      errorMessage = "locationsViewModel_openurl_error".localized
-      DLog(errorMessage ?? "")
+      let errorMessage = "locationsViewModel_openurl_error".localized
+      state.errorMessage = errorMessage
+      DLog(errorMessage)
+
       output?.displayError()
       return
     }
@@ -70,14 +62,21 @@ private extension LocationsViewModel {
   }
 
   func loadDataDidSuccess(locations: LocationList) {
-    title = "\(ViewModelConst.title)(\(locations.count))"
     locationList = locations
+
+    let title = Converter.convert(locationsNumber: locationList.count)
+    let locationsInfo = Converter.convert(locations: locationList)
+    state.titleNavBar = title
+    state.locations = locationsInfo
+
     output?.displayNewData()
   }
 
   func loadDataDidFail(error: Error) {
-    errorMessage = error.localizedDescription
-    DLog(errorMessage ?? "")
+    let errorMessage = error.localizedDescription
+    state.errorMessage = errorMessage
+    DLog(errorMessage)
+
     output?.displayError()
   }
 }
