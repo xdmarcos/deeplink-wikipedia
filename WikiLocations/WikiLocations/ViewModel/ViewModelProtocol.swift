@@ -9,7 +9,7 @@ import Foundation
 
 protocol ViewModelProtocol {
   var output: LocationsViewProtocol? { get set }
-  var state: ViewState { get }
+  var state: ViewRepresentable { get }
   func loadData()
   func handleSelectedCell(indexPath: IndexPath) -> Bool
 }

@@ -13,6 +13,7 @@
 		7A0C2EA0260A914400C57C14 /* LocationsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */; };
 		7A0F4D942611EB38006B5F04 /* Converter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F4D932611EB38006B5F04 /* Converter.swift */; };
 		7A0F4D982611F340006B5F04 /* ConverterTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F4D972611F340006B5F04 /* ConverterTests.swift */; };
+		7A0F4D9C2611FB9E006B5F04 /* ViewRepresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0F4D9B2611FB9E006B5F04 /* ViewRepresentable.swift */; };
 		7A2629BE260CA0BC00B4FBF7 /* Common in Frameworks */ = {isa = PBXBuildFile; productRef = 7A2629BD260CA0BC00B4FBF7 /* Common */; };
 		7A262A3C260CAFC200B4FBF7 /* LocationsViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A262A3B260CAFC200B4FBF7 /* LocationsViewModelTests.swift */; };
 		7A262A44260CB0D700B4FBF7 /* LocationsViewModelMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A262A43260CB0D700B4FBF7 /* LocationsViewModelMocks.swift */; };
@@ -60,6 +61,7 @@
 		7A0C2E9F260A914400C57C14 /* LocationsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsTableViewController.swift; sourceTree = "<group>"; };
 		7A0F4D932611EB38006B5F04 /* Converter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Converter.swift; sourceTree = "<group>"; };
 		7A0F4D972611F340006B5F04 /* ConverterTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConverterTests.swift; sourceTree = "<group>"; };
+		7A0F4D9B2611FB9E006B5F04 /* ViewRepresentable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewRepresentable.swift; sourceTree = "<group>"; };
 		7A2629C5260CA40700B4FBF7 /* WikiLocationsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WikiLocationsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7A2629C9260CA40700B4FBF7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7A262A3B260CAFC200B4FBF7 /* LocationsViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationsViewModelTests.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 				7A42102B260A68B300280D35 /* Location.swift */,
 				7A710F1F260A7C81009FBA2C /* LocationJson.swift */,
 				7AF1B4572611E77B00123F05 /* ViewState.swift */,
+				7A0F4D9B2611FB9E006B5F04 /* ViewRepresentable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -485,6 +488,7 @@
 				7AC9276726095269005D7E9C /* RootViewController.swift in Sources */,
 				7A0F4D942611EB38006B5F04 /* Converter.swift in Sources */,
 				7AF1B4582611E77B00123F05 /* ViewState.swift in Sources */,
+				7A0F4D9C2611FB9E006B5F04 /* ViewRepresentable.swift in Sources */,
 				7AC9276326095269005D7E9C /* AppDelegate.swift in Sources */,
 				7A421028260A68A700280D35 /* LocationClient.swift in Sources */,
 				7A43E36F260B66B9004FF429 /* ViewModelProtocol.swift in Sources */,
