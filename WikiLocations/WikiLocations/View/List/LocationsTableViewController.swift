@@ -28,7 +28,7 @@ class LocationsTableViewController: UIViewController {
   }
 
   private func setup() {
-    viewModel.view = self
+    viewModel.output = self
   }
 
   // MARK: View lifecycle

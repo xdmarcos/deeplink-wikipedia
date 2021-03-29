@@ -14,7 +14,7 @@ class LocationsViewModel: ViewModelProtocol {
     static let deeplinkFormat = "wikipedia://places/location?name=%@&lat=%f&lon=%f"
   }
 
-  weak var view: LocationsViewProtocol?
+  weak var output: LocationsViewProtocol?
   var title = ViewModelConst.title
   var errorMessage: String?
   var numberOfSections = 1
@@ -63,7 +63,7 @@ private extension LocationsViewModel {
     guard UIApplication.shared.canOpenURL(url) else {
       errorMessage = "locationsViewModel_openurl_error".localized
       DLog(errorMessage ?? "")
-      view?.displayError()
+      output?.displayError()
       return
     }
 
@@ -73,12 +73,12 @@ private extension LocationsViewModel {
   func loadDataDidSuccess(locations: LocationList) {
     title = "\(ViewModelConst.title)(\(locations.count))"
     locationList = locations
-    view?.displayNewData()
+    output?.displayNewData()
   }
 
   func loadDataDidFail(error: Error) {
     errorMessage = error.localizedDescription
     DLog(errorMessage ?? "")
-    view?.displayError()
+    output?.displayError()
   }
 }

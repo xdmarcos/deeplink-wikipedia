@@ -1,3 +1,3 @@
 # PlistReader
 
-A simple helper to read .plist files
+A simple utility to read .plist files
